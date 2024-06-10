@@ -1,0 +1,17 @@
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/vector-premium/alemania-vs-escocia-futbol-2024-partido-contra-2024-partido-campeonato-fase-grupos-contra-equipos-intro-fondo-deportivo-competicion-campeonato_7280-11154.jpg?w=1060",14/6 1:00 pm
+https://live4-ott.izzigo.tv/out/u/dash/AZTECA-1-HD/default.mpd
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVE-1lw59FZTuKAYxeKqNO9vgZdAJirH6HO400RFH5iSturJAW9yB67gKJ&s=10",15/6 7:00am
+https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://static.vecteezy.com/system/resources/previews/042/663/192/non_2x/spain-vs-croatia-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition-vector.jpg",15/6 10:00am
+https://channel01.akamaized.net/hls/live/2022749/event01/index.m3u8
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/premium-vector/italy-vs-albania-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11411.jpg",15/6 1:00pm
+https://channel02-notusa.akamaized.net:443/hls/live/2023914-b/event01/index_6.m3u8
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4a6ZA2YADFbIFlDMW2jSIK7I6qOJaZdiSEM3yAVE-T4qxBMLSIARR82s&s=10",16/6 7:00am
+https://live5-ott.izzigo.tv/out/u/dash/RDF-MTY-Imagen-Television-HD/default.mpd
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMVsby1Cqr3yGYcpNUHBsKRZ7rJxdkRLda2WfnrWvjBZ7F-c5PlWFmY3f&s=10",16/6 10:00am
+https://live2-ott.izzigo.tv/out/u/dash/CANAL-5-HD/default.mpd
