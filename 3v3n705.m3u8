@@ -1,5 +1,8 @@
-#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4a6ZA2YADFbIFlDMW2jSIK7I6qOJaZdiSEM3yAVE-T4qxBMLSIARR82s&s=10",16/6 7:00am
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4a6ZA2YADFbIFlDMW2jSIK7I6qOJaZdiSEM3yAVE-T4qxBMLSIARR82s&s=10",Opc1 16/6 7:00am
+https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
+
+#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4a6ZA2YADFbIFlDMW2jSIK7I6qOJaZdiSEM3yAVE-T4qxBMLSIARR82s&s=10",Opc2 16/6 7:00am
+https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
 
 #EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMVsby1Cqr3yGYcpNUHBsKRZ7rJxdkRLda2WfnrWvjBZ7F-c5PlWFmY3f&s=10",16/6 10:00am
 https://archive.org/download/eca_20240611/eca.mp4
