@@ -1,14 +1,11 @@
-#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/belgium-vs-slovakia-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11434.jpg?w=1060",Opc1 17/6 10:00 am
+#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/austria-vs-france-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11486.jpg",Opc1 17/6 1:00 pm
 https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
 
-#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/belgium-vs-slovakia-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11434.jpg?w=1060",Opc2 17/6 10:00 am
+#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/austria-vs-france-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11486.jpg",Opc2 17/6 1:00 pm
 https://linear-360.frequency.stream/mt/studio/360/hls/master/playlist.m3u8
 
-#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/belgium-vs-slovakia-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11434.jpg?w=1060",Opc3 17/6 10:00 am
-https://i.mjh.nz/SamsungTVPlus/ESBC4100002AG.m3u8
-
-#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/austria-vs-france-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11486.jpg",17/6 1:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://img.freepik.com/premium-vector/austria-vs-france-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11486.jpg",Opc3 17/6 1:00 pm
+https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
 
 #EXTINF:-1 group-title="EUROCOPA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzx_9JvCRVLM8DS7oEnDB1OFcE3fXTfwjS2TYRsIGs_LA8LtKXtrWLzUs&s=10",18/6 10:00 am
 https://archive.org/download/eca_20240611/eca.mp4
