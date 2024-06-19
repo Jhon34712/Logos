@@ -1,15 +1,11 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyMVPxxjibe-w4Kxq-5bwtOeGUaveczHOMOQ&usqp=CAU",Opc1 19/6 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwjx_s4ypZfkYGa45Pl8uKwg8qNdrcbUDQw&usqp=CAU",19/6 1:00 pm
 https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyMVPxxjibe-w4Kxq-5bwtOeGUaveczHOMOQ&usqp=CAU",Opc2 19/6 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwjx_s4ypZfkYGa45Pl8uKwg8qNdrcbUDQw&usqp=CAU",19/6 1:00 pm
 https://linear-360.frequency.stream/mt/studio/360/hls/master/playlist.m3u8
 
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyMVPxxjibe-w4Kxq-5bwtOeGUaveczHOMOQ&usqp=CAU",Opc3 19/6 10:00 am
-https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
-
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwjx_s4ypZfkYGa45Pl8uKwg8qNdrcbUDQw&usqp=CAU",19/6 1:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
+https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
 
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwhfJXLHYGK5wjVImXkfFxSk7i23SQgDqng&usqp=CAU",20/6 7:00 am
 https://archive.org/download/eca_20240611/eca.mp4
