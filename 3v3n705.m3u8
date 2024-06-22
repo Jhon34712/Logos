@@ -1,14 +1,11 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/premium-vector/turkiye-vs-portugal-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11639.jpg",Opc1 22/6 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJQXQIcLgDFyywSBZ0kXqDkfzEu295jRUYFolc8ZkZJtWdzQsRA2yd583&s=10",Opc1 22/6 1:00 pm
 https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/premium-vector/turkiye-vs-portugal-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11639.jpg",Opc2 22/6 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJQXQIcLgDFyywSBZ0kXqDkfzEu295jRUYFolc8ZkZJtWdzQsRA2yd583&s=10",Opc2 22/6 1:00 pm
 https://linear-360.frequency.stream/mt/studio/360/hls/master/playlist.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/premium-vector/turkiye-vs-portugal-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11639.jpg",Opc3 22/6 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJQXQIcLgDFyywSBZ0kXqDkfzEu295jRUYFolc8ZkZJtWdzQsRA2yd583&s=10",Opc3 22/6 1:00 pm
 https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJQXQIcLgDFyywSBZ0kXqDkfzEu295jRUYFolc8ZkZJtWdzQsRA2yd583&s=10",22/6 1:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
 
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t4.ftcdn.net/jpg/08/19/44/51/360_F_819445165_RC1nQvYqHt2xQV2KtHquDV0u2qxZQaSC.webp",22/6 4:00 pm
 https://archive.org/download/eca_20240611/eca.mp4
