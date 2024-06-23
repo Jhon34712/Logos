@@ -1,17 +1,8 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6KexzE3IKdrJcPs7rkKjL666SKcXumrT_A&usqp=CAU",Opc1 23/6 1:00 pm
-https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t3.ftcdn.net/jpg/08/09/94/92/360_F_809949296_yi6KUE6Qhh1mWkQmZqUmJSW5FDPAhnC3.webp",Opc1 23/6 4:00 pm
+https://mdstrm.com/live-stream-playlist/61087e5b8e21e304a159211e.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6KexzE3IKdrJcPs7rkKjL666SKcXumrT_A&usqp=CAU",Opc2 23/6 1:00 pm
-https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/premium-vector/scotland-vs-hungary-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11288.jpg",Opc1 23/6 1:00 pm
-https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-2-HD/default.mpd
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://img.freepik.com/premium-vector/scotland-vs-hungary-football-2024-match-versus-2024-group-stage-championship-match-versus-teams-intro-sport-background-championship-competition_7280-11288.jpg",Opc2 23/6 1:00 pm
-https://i.mjh.nz/SamsungTVPlus/ESBC4100002AG.m3u8
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t3.ftcdn.net/jpg/08/09/94/92/360_F_809949296_yi6KUE6Qhh1mWkQmZqUmJSW5FDPAhnC3.webp",23/6 4:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t3.ftcdn.net/jpg/08/09/94/92/360_F_809949296_yi6KUE6Qhh1mWkQmZqUmJSW5FDPAhnC3.webp",Opc2 23/6 4:00 pm
+http://fastv.lat/play/J9NY4Zxauur1yD58OdD7rW6W99IQYj9W2qD3GWcX0obadohkIKruMPDkCVLgjqbx/ts
 
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://static.vecteezy.com/system/resources/previews/046/285/745/non_2x/uruguay-and-panama-match-emblem-american-football-usa-2024-abstract-design-logo-symbol-american-football-final-illustration-free-vector.jpg",23/6 7:00 pm
 https://archive.org/download/eca_20240611/eca.mp4
