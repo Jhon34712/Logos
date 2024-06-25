@@ -1,17 +1,17 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t4.ftcdn.net/jpg/08/20/60/17/360_F_820601780_iqShe2tXmHv2srP2ArPtayPYTGjDOwMq.jpg",Opc1 24/6 7:00 pm
-https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://www.shutterstock.com/image-vector/football-euro-cup-2024-france-260nw-2468637729.jpg",Opc1 25/6 10:00 am
+https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t4.ftcdn.net/jpg/08/20/60/17/360_F_820601780_iqShe2tXmHv2srP2ArPtayPYTGjDOwMq.jpg",Opc2 24/6 7:00 pm
-https://live2-ott.izzigo.tv/out/u/dash/CANAL-5-HD/default.mpd
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://t4.ftcdn.net/jpg/08/20/60/17/360_F_820601780_iqShe2tXmHv2srP2ArPtayPYTGjDOwMq.jpg",Opc3 24/6 7:00 pm
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://www.shutterstock.com/image-vector/football-euro-cup-2024-france-260nw-2468637729.jpg",Opc2 25/6 10:00 am
 https://linear-360.frequency.stream/mt/studio/360/hls/master/playlist.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://www.shutterstock.com/image-vector/football-euro-cup-2024-france-260nw-2468637729.jpg",25/6 10:00 am
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://www.shutterstock.com/image-vector/football-euro-cup-2024-france-260nw-2468637729.jpg",Opc3 25/6 10:00 am
+https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiF5gcSIhmvA7TN0Kkh-KNhUH0WrLM-pNodk2xXmxq8paL8QfMU5wyUtY&s=10",25/6 10:00 am
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiF5gcSIhmvA7TN0Kkh-KNhUH0WrLM-pNodk2xXmxq8paL8QfMU5wyUtY&s=10",Opc1 25/6 10:00 am
+https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-2-HD/default.mpd
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiF5gcSIhmvA7TN0Kkh-KNhUH0WrLM-pNodk2xXmxq8paL8QfMU5wyUtY&s=10",Opc2 25/6 10:00 am
+https://i.mjh.nz/SamsungTVPlus/ESBC4100002AG.m3u8
 
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6vjjjjF5qvyQYHnT3OHX-Z7JUvMfNf2F159J9oN8_G40ypW7kXmr9qRtJ&s=10",25/6 1:00 pm
 https://archive.org/download/eca_20240611/eca.mp4
