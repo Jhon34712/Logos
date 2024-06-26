@@ -1,17 +1,5 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzvW75cVQ6gZvkMZGZJLzhitSjw1KhkKLHDoa8Pc5PE_FaTXNxm8Kt7ug&s=10",Opc1 26/6 1:00 pm
-https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzvW75cVQ6gZvkMZGZJLzhitSjw1KhkKLHDoa8Pc5PE_FaTXNxm8Kt7ug&s=10",Opc2 26/6 1:00 pm
-https://i.mjh.nz/SamsungTVPlus/ESBC4100001NZ.m3u8
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://cdn.vectorstock.com/i/500p/00/92/czechia-vs-trkiye-football-2024-match-versus-vector-51010092.jpg",Opc1 26/6 1:00 pm
-https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-2-HD/default.mpd
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://cdn.vectorstock.com/i/500p/00/92/czechia-vs-trkiye-football-2024-match-versus-vector-51010092.jpg",Opc2 26/6 1:00 pm
-https://i.mjh.nz/SamsungTVPlus/ESBC4100002AG.m3u8
-
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGpTa-KtcWJK7PxRtjx1XpQ3siGQmCV8pdZnPGhL9S8rBxXijTxnnTLzCt&s=10",26/6 4:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
+https://mdstrm.com/live-stream-playlist/61087e5b8e21e304a159211e.m3u8
 
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRR_suDtwAc56C_-aE9rkeJZKbLf4PGUvPBkgWSV0WeZbAOMd35PVZ7WA&s=10",26/6 7:00 pm
 https://archive.org/download/eca_20240611/eca.mp4
