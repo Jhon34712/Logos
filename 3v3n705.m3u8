@@ -1,5 +1,8 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGpTa-KtcWJK7PxRtjx1XpQ3siGQmCV8pdZnPGhL9S8rBxXijTxnnTLzCt&s=10",26/6 4:00 pm
-https://mdstrm.com/live-stream-playlist/61087e5b8e21e304a159211e.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRR_suDtwAc56C_-aE9rkeJZKbLf4PGUvPBkgWSV0WeZbAOMd35PVZ7WA&s=10",Opc1 26/6 7:00 pm
+https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRR_suDtwAc56C_-aE9rkeJZKbLf4PGUvPBkgWSV0WeZbAOMd35PVZ7WA&s=10",26/6 7:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRR_suDtwAc56C_-aE9rkeJZKbLf4PGUvPBkgWSV0WeZbAOMd35PVZ7WA&s=10",Opc2 26/6 7:00 pm
+https://live2-ott.izzigo.tv/out/u/dash/CANAL-5-HD/default.mpd
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRR_suDtwAc56C_-aE9rkeJZKbLf4PGUvPBkgWSV0WeZbAOMd35PVZ7WA&s=10",Opc3 26/6 7:00 pm
+https://linear-360.frequency.stream/mt/studio/360/hls/master/playlist.m3u8
