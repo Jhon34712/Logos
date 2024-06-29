@@ -1,5 +1,11 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm9F9zGow8bzS7XVMDGCcgG3KfJbnY0X2eXT-aTZNyOx1iEJ8qwk20S0w&s=10",Opc1 28/6 7:00 pm
-https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa7z4VYIV5IrOejJf9-dRJWEy0LljudhGFt4LbSxxwUW3MTav02JCvOvs&s=10",29/6 10:00 am
+https://archive.org/download/eca_20240611/eca.mp4
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm9F9zGow8bzS7XVMDGCcgG3KfJbnY0X2eXT-aTZNyOx1iEJ8qwk20S0w&s=10",Opc2 28/6 7:00 pm
-https://linear-360.frequency.stream/mt/studio/360/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0l4s2Y4zs2HJPjCGMGlf0AZq1-lN1Wa9oxK3-aLa5Wgcy4zZLnfqH8-4q&s=10",29/6 1:00 pm
+https://archive.org/download/eca_20240611/eca.mp4
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ-sNf3_M-U1gIad-Tfq8Mf29ZCi5uR0TSpA&usqp=CAU",29/6 6:00 pm
+https://archive.org/download/eca_20240611/eca.mp4
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG_TAkIIcTkYmXs8itrRW-DBGhyaPoM7S95g&usqp=CAU",29/6 6:00 pm
+https://archive.org/download/eca_20240611/eca.mp4
