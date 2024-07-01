@@ -1,11 +1,9 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRpvpuxUZx8r7zfu-Yv32x5aEn399jhZmj0Q&usqp=CAU",Opc1 1/7 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMHgbfS5CDgm7YTY3ZpkpvVjwpfuhHABXc0HL081PFy2imnObJ-kBpnHk&s=10",Opc1 1/7 1:00 pm
 https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRpvpuxUZx8r7zfu-Yv32x5aEn399jhZmj0Q&usqp=CAU",Opc2 1/7 10:00 am
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMHgbfS5CDgm7YTY3ZpkpvVjwpfuhHABXc0HL081PFy2imnObJ-kBpnHk&s=10",Opc2 1/7 1:00 pm
 https://jmp2.uk/SamsungTVPlus/ESBC4100001NZ.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMHgbfS5CDgm7YTY3ZpkpvVjwpfuhHABXc0HL081PFy2imnObJ-kBpnHk&s=10",1/7 1:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
 
 #EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy8dwvmoZaBizVQ9NTqZV7ABIb5QbrYHZ0ecbOYaTMJZlmeS0TOTYYDS3S&s=10",1/7 7:00 pm
 https://archive.org/download/eca_20240611/eca.mp4
