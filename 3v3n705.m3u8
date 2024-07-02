@@ -1,5 +1,11 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy8dwvmoZaBizVQ9NTqZV7ABIb5QbrYHZ0ecbOYaTMJZlmeS0TOTYYDS3S&s=10",1/7 7:00 pm
-https://mdstrm.com/live-stream-playlist/61087e5b8e21e304a159211e.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuUJaIwniYTJ8rGZ5t7_uOhPqvz86bHeIIVw&usqp=CAU",2/7 10:00 am
+https://archive.org/download/eca_20240611/eca.mp4
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://static.vecteezy.com/system/resources/previews/046/435/110/non_2x/usa-and-uruguay-match-flag-american-football-usa-2024-abstract-design-logo-symbol-american-football-final-illustration-free-vector.jpg",1/7 :00 pm
-https://mdstrm.com/live-stream-playlist/5ff464aaf89edc69bfe55de9.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRGVec38w1Hi1HpfMYpoPkw2ZR2xdC9nLEwazEMs7IKkAsvkjPT0l8-b6&s=10",2/7 1:00 pm
+https://archive.org/download/eca_20240611/eca.mp4
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCTetLXM2Ev5DQVlxnKRboDv8ufgv0Wk5e73_tC6JW2HOn5eyV79kW4ig&s=10",2/7 7:00 pm
+https://archive.org/download/eca_20240611/eca.mp4
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://www.ole.com.ar/images/2024/06/25/1E3Mdy4TY_1200x630__1.jpg",2/7 7:00 pm
+https://archive.org/download/eca_20240611/eca.mp4
