@@ -1,11 +1,5 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://editorial.uefa.com/resources/028f-1b567f6454df-5228bff274e3-1000/format/wide1/final_poster.jpeg?imwidth=988",Opc1 14/7 1:00 pm
-https://live4-ott.izzigo.tv/out/u/dash/SKY-UEFA-EURO-2024-1-HD/default.mpd
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://editorial.uefa.com/resources/028f-1b567f6454df-5228bff274e3-1000/format/wide1/final_poster.jpeg?imwidth=988",opc2 14/7 1:00 pm
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/fca.png",opc1 14/7 6:00 pm
 https://live2-ott.izzigo.tv/out/u/dash/CANAL-5-HD/default.mpd
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://editorial.uefa.com/resources/028f-1b567f6454df-5228bff274e3-1000/format/wide1/final_poster.jpeg?imwidth=988",opc3 14/7 1:00 pm
-https://dh6vo1bovy43s.cloudfront.net:443/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-x3gcl32l5ffq2/../../../manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-x3gcl32l5ffq2/b24b1b8d-38ce-4663-8332-3f4e2daae234/3.m3u8
-
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/fca.png",14/7 6:00 pm
-https://archive.org/download/eca_20240611/eca.mp4
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/fca.png",Opc2 14/7 6:00 pm
+https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8
