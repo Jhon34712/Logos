@@ -1,5 +1,11 @@
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/fca.png",opc1 14/7 6:00 pm
-https://live2-ott.izzigo.tv/out/u/dash/CANAL-5-HD/default.mpd
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://radiosonora.com.mx/wp-content/uploads/2024/07/28.webp",Claro sports
+https://dai.google.com/linear/hls/event/NHe1sutaROeLlaDlLvF4-g/master.m3u8
 
-#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/fca.png",Opc2 14/7 6:00 pm
-https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://radiosonora.com.mx/wp-content/uploads/2024/07/28.webp",Claro sports 2
+https://pubads.g.doubleclick.net/ssai/event/erhZGvvqQdmR8xTfFO3MZw/master.m3u8
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://radiosonora.com.mx/wp-content/uploads/2024/07/28.webp",Claro sports 3
+https://pubads.g.doubleclick.net/ssai/event/6DSQ8CGURXew6V-oYhN27Q/master.m3u8
+
+#EXTINF:-1 group-title="EURO COPA AMERICA" tvg-logo="https://radiosonora.com.mx/wp-content/uploads/2024/07/28.webp",Claro sports 4
+https://pubads.g.doubleclick.net/ssai/event/UDhGuB7fSvuKDebY72_m_Q/master.m3u8
