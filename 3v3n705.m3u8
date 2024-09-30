@@ -4,13 +4,13 @@ https://mdstrm.com/live-stream-playlist/609b243156cca108312822a6.m3u8
 #EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/a11b1ba3-d109-45ec-a87e-4312bad0682c/uno-hora_color_logodrx.png" group-title="Mexico",AZTECA UNO -1 hora
 https://azt-oo.otteravision.com/out/v1/da53d7d388be437e92bf8f464018eb48/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://cdn.mitvstatic.com/channels/las-estrellas-m.png" group-title="Mexico",Las Estrellas
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/LE.png" group-title="Mexico",Las Estrellas
 https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/64e35aff6b1fdb0008ea8441/colorLogoPNG.png" group-title="Mexico",Imagen TV+
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=6149
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/07/Logotipo-Canal-5-M%C3%A9xico.png" group-title="Mexico",Canal 5 MX
+#EXTINF:-1 tvg-logo="https://i.imgur.com/jJ6v5ea.png" group-title="Mexico",Canal 5 MX
 http://live.superteve.com:33527/ENVIVO/qOGzDaCITL/46
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Mexico",Multimedios CDMX
@@ -31,13 +31,13 @@ https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Multimedios_Canal_Seis_Logo.svg/1200px-Multimedios_Canal_Seis_Logo.svg.png" group-title="Mexico",Multimedios CD Juarez
 https://mdstrm.com/live-stream-playlist/5d9e440d675235586a92be7f.m3u8
 
-#EXTINF:-1 tvg-logo="https://rndserv.xyz/img/milenio.png" group-title="Mexico",Milenio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d4/Milenio_Television.png" group-title="Mexico",Milenio
 https://mdstrm.com/live-stream-playlist/610178c7db32a4112d994650.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.lyngsat.com/logo/tv/tt/teleritmo-mx.png" group-title="Mexico",Teleritmo
 https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Azteca_7_%282016_Blank%29.svg/1200px-Azteca_7_%282016_Blank%29.svg.png" group-title="Mexico",AZTECA 7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/A7.png" group-title="Mexico",AZTECA 7
 https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81/master.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TWk9gfd.png" group-title="Mexico",A Más +
