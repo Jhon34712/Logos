@@ -10,8 +10,8 @@ https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/64e35aff6b1fdb0008ea8441/colorLogoPNG.png" group-title="Abierta TV",Imagen TV+
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=6149
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/jJ6v5ea.png" group-title="Abierta TV",Canal 5 MX
-http://live.superteve.com:33527/ENVIVO/qOGzDaCITL/46
+#EXTINF:-1 tvg-logo="https://i.imgur.com/jJ6v5ea.png" group-title="Abierta TV",Canal 5
+https://zekonew.koskoros.ru/zeko/premium936/mono.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Abierta TV",Multimedios CDMX
 https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8
