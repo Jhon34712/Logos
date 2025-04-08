@@ -349,6 +349,12 @@ https://d3fr64zqebnqn3.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTINF:-1 group-title="Música" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB2300003JZ_20221214T015016SQUARE.png_20221214015016.png",Xite Just Chill  
 https://d3ai750ol9my06.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/JustChill-prod/playlist.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.us_privacy=1YNY&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.ssai=SSSLIVE
 
+#EXTINF:-1 tvg-logo="https://www.fmh.la/images/team/logo_movies.png" group-title="Entretenimiento",FMH Movies
+https://live-evg25.tv360.bitel.com.pe/bitel/fmhmovies/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.fmh.la/images/team/logo_kids.png" group-title="Entretenimiento",FMH kids
+https://live-evg25.tv360.bitel.com.pe/bitel/fmhkids/playlist.m3u8
+
 #EXTINF:-1 tvg-logo="https://images.sr.roku.com/idType/roku/context/trc/id/5ae9fb0c6e015b0d951063f6a6b39ee5/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1711394905485_telemundo-acci-n-fclogo-72-dpi-260-x-147-260-147-roku-hud-logo-center-align-efefef-w-trans-bkgd-1_%25281%2529.png" group-title="Entretenimiento" ,Telemundo Acción
 #https://jmp2.uk/rok-5ae9fb0c6e015b0d951063f6a6b39ee5.m3u8
 #https://d4whmvwm0rdvi.cloudfront.net/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-nbcu-linear/5ed8b6e5-6aaa-4826-8817-0507d54ccb2f/5.m3u8
