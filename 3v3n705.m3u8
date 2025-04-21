@@ -374,7 +374,7 @@ https://d4whmvwm0rdvi.cloudfront.net/10007/99991748/hls/master.m3u8?ads.xumo_cha
 #EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://image.xumo.com/v1/channels/channel/99991749/600x337.webp?type=channelTile",Telemundo Romance
 https://xumo-drct-ch836-57aiq.fast.nbcuni.com/live/master.m3u8
 
-#EXTINF:-1 group-title="Entretenimiento" tvg-logo="",Telemundo PR
+#EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/telemundo.png",Telemundo PR
 https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
 
 #EXTINF:-1 tvg-logo="https://images.sr.roku.com/idType/roku/context/trc/id/03a419fc4dff59b39b176d9f76b09e38/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1659563412501_LoveNature_260x147_HUDenEspanol.png" group-title="Entretenimiento", Love Nature Spanish
