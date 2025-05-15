@@ -369,7 +369,7 @@ https://aka-live1049.delivery.roku.com/e88c0da3-96f4-4325-b5c7-d11b31d4a367/t2-o
 #https://d4whmvwm0rdvi.cloudfront.net/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-nbcu-linear/5ed8b6e5-6aaa-4826-8817-0507d54ccb2f/5.m3u8
 https://d4whmvwm0rdvi.cloudfront.net/10007/99991748/hls/master.m3u8?ads.xumo_channelId=99991748&ads.asnw=169843&ads.afid=137391198&ads.sfid=16926452&ads.csid=xumo_desktopweb_TelemundoEpisodic_ssai_cro&ads._fw_is_lat=0&ads._fw_us_privacy=1YNN&ads._fw_coppa=0&ads._fw_did=093d4144-fbcb-ac00-bcae-31eb3a781ae9&ads._fw_vcid2=512116:093d4144-fbcb-ac00-bcae-31eb3a781ae9&ads._fw_app_bundle=&ads._fw_app_store_url=&ads._fw_content_category=IAB1-7&ads._fw_content_genre=Latino&ads._fw_content_language=es&ads._fw_content_rating=TV-PG&ads._fw_deviceMake=&ads._fw_device_model=&ads._fw_deviceType=2-Personal_Computer&ads.appVersion=2.15.5&ads.appName=xumo&ads.xumo_contentId=2560&ads.xumo_contentName=TelemundoEpisodic&ads.xumo_providerId=2560&ads.xumo_providerName=TelemundoEpisodic&ads.channelId=99991748&ads._fw_ifa_type=dpid&ads.site_name=XumoPlay&ads.site_page=https%253A%252F%252Fplay.xumo.com
 
-#EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://image.xumo.com/v1/channels/channel/99991749/600x337.webp?type=channelTile",Telemundo Romance
+#EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/Tromance.png",Telemundo Romance
 https://xumo-drct-ch836-57aiq.fast.nbcuni.com/live/master.m3u8
 
 #EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/telemundo.png",Telemundo PR
