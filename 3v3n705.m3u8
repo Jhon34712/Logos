@@ -1,4 +1,4 @@
-#EXTINF:-1 tvg-logo="https://i.imgur.com/rRxgBtI.png" group-title="Abierta TV",AZTECA UNO
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/1.png" group-title="Abierta TV",AZTECA UNO
 https://mdstrm.com/live-stream-playlist/609b243156cca108312822a6.m3u8
 
 #EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/a11b1ba3-d109-45ec-a87e-4312bad0682c/uno-hora_color_logodrx.png" group-title="Abierta TV",AZTECA UNO -1 hora
@@ -7,55 +7,52 @@ https://azt-oo.otteravision.com/out/v1/da53d7d388be437e92bf8f464018eb48/index.m3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/LE.png" group-title="Abierta TV",Las Estrellas
 https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/64e35aff6b1fdb0008ea8441/colorLogoPNG.png" group-title="Abierta TV",Imagen TV+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/imagentv.png" group-title="Abierta TV",Imagen TV+
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=6149
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/jJ6v5ea.png" group-title="Abierta TV",Canal 5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/5.png" group-title="Abierta TV",Canal 5
 https://zekonew.newkso.ru/zeko/premium936/mono.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Abierta TV",Multimedios CDMX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios CDMX
 https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Abierta TV",Multimedios Gdl
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios Gdl
 https://mdstrm.com/live-stream-playlist/5c54d38ca392a5119bb0aa0d.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Multimedios_Canal_Seis_Logo.svg/1200px-Multimedios_Canal_Seis_Logo.svg.png" group-title="Abierta TV",Multimedios Mty
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png.svg.png" group-title="Abierta TV",Multimedios Mty
 https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Multimedios_Canal_Seis_Logo.svg/1200px-Multimedios_Canal_Seis_Logo.svg.png" group-title="Abierta TV",Multimedios Laguna
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png.svg.png" group-title="Abierta TV",Multimedios Laguna
 https://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Multimedios_Canal_Seis_Logo.svg/1200px-Multimedios_Canal_Seis_Logo.svg.png" group-title="Abierta TV",Multimedios Bajio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.pngvg.png" group-title="Abierta TV",Multimedios Bajio
 https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Multimedios_Canal_Seis_Logo.svg/1200px-Multimedios_Canal_Seis_Logo.svg.png" group-title="Abierta TV",Multimedios CD Juarez
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png.svg.png" group-title="Abierta TV",Multimedios CD Juarez
 https://mdstrm.com/live-stream-playlist/5d9e440d675235586a92be7f.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d4/Milenio_Television.png" group-title="Abierta TV",Milenio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/milenio.png" group-title="Abierta TV",Milenio
 https://mdstrm.com/live-stream-playlist/610178c7db32a4112d994650.m3u8
 
-#EXTINF:-1 tvg-logo="https://www.lyngsat.com/logo/tv/tt/teleritmo-mx.png" group-title="Abierta TV",Teleritmo
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/tlr.png" group-title="Abierta TV",Teleritmo
 https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/A7.png" group-title="Abierta TV",AZTECA 7
 https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/TWk9gfd.png" group-title="Abierta TV",A Más +
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/a+.png" group-title="Abierta TV",A Más +
 https://mdstrm.com/live-stream-playlist/60b56be1000ea50835fa1e63.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/TWk9gfd.png" group-title="Abierta TV",A Más
-https://dai.google.com/linear/hls/event/SJysMl45QMSwjo0TodSk1Q/master.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e4/Logotipo_de_TV_Azteca.png" group-title="Abierta TV",Azteca Noreste
 https://live.info7.mx/info7/stream.m3u8
 
-#EXTINF:-1 tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s15213_dark_360w_270h.png" group-title="Abierta TV",MVS TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/mvs.png" group-title="Abierta TV",MVS TV
 https://dish.akamaized.net/Content/HLS_HLS_CLR/Live/channel(mvs)/variant.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Og17U9N.png" group-title="Abierta TV",ADN 40
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/adn40.png" group-title="Abierta TV",ADN 40
 https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
 
-#EXTINF:-1 group-title="Abierta TV",FORO TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/forotv.png" group-title="Abierta TV",FORO TV
 https://notusaauth.univision.com/api/v3/akamai-auth/token-auth?url=https://channel02secure-notusa.akamaized.net/hls/live/2023914/event01/index.m3u8&redirect=true
 
 #EXTINF:-1 tvg-chno="22.8"id="N+" tvg-logo="https://i.imgur.com/TwBa344.png" group-title="Abierta TV",N+ GDL
@@ -291,7 +288,7 @@ https://s5.mexside.net:1936/medios/medios/playlist.m3u8
 
 
 
-#EXTINF:-1 tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s32749_dark_360w_270h.png" group-title="Música",TeleRitmo
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/tlr.png" group-title="Música",TeleRitmo
 https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/vr.png" group-title="Música",Video Rola
@@ -300,7 +297,7 @@ https://d3b2epqdk0p7vd.cloudfront.net/out/v1/8a448b5e16384af4a3c8146a7b049c32/in
 #EXTINF:-1 group-title="Música" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/vr+.png",VR+
 https://dxmwlv9y37d4r.cloudfront.net/VIDEOROLA_PLUS_HD/master.m3u8
 
-#EXTINF:-1 group-title="Música" tvg-logo="https://exa.tv/wp-content/themes/Exatv/img/logo_mobile.png",Exa tv
+#EXTINF:-1 group-title="Música" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/exatv.png",Exa tv
 https://mvs.daioncdn.net:443/exatv/exatv_1080p.m3u8?&sid=76arxwhpzqio&app=188fff62-593e-43fb-8604-34d30d693c1e&ce=2
 
 #EXTINF:-1 group-title="Música" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/top.png",TOP Latino  
@@ -309,7 +306,7 @@ https://live-evg25.tv360.bitel.com.pe/bitel/toplatino/playlist.m3u8
 #EXTINF:-1 group-title="Música" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/Attv.png",activatv
 https://streamtv.mediasector.es/hls/activatv/index.m3u8
 
-#EXTINF:-1 group-title="Música" tvg-logo="https://urbanotvcr.com/wp-content/uploads/2023/04/cropped-logo-tv-blanco.png",Urbano tv
+#EXTINF:-1 group-title="Música" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/urbanotv.png",Urbano tv
 https://59ef525c24caa.streamlock.net/tvurbano/tvurbano/playlist.m3u8
 
 
