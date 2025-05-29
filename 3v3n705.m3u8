@@ -393,7 +393,7 @@ https://d2t7ujjc7lurgd.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTINF:-1 tvg-logo="https://images.sr.roku.com/idType/roku/context/trc/id/db95a237643ea0eea113c6c024515df2/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1728506237013_LOGO_TODO_NOVELAS_HUD_260x147SusyGomez.png" group-title="Entretenimiento" , Todo Novelas Pasiones
 https://live-manifest.production-public.tubi.io/live/820271ee-6f31-4557-b429-b82f0dbbd0cf/playlist.m3u8
 
-#EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrPcUx-IsO6f9Zqoq2Zh5kVkMzoO6gdpIxhpqh5pQUg4mtBuidINFco60&s=10",Sony cine
+#EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/sonycine.png",Sony cine
 https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://images.sr.roku.com/idType/roku/context/trc/id/2f6ef53a89b14266cdf8aaad2f3a0d81/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1723510526011_Roku_SonyOne-CinemaImage-HUD-1_260x147px_1.png" group-title="Entretenimiento", Sony One Cinema
