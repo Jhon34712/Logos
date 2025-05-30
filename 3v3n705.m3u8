@@ -384,7 +384,7 @@ https://d1k3vzh2ivy22k.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/673249ccc7626f0008c72076/colorLogoPNG.png" group-title="Entretenimiento" ,Tu Discovery
 http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/673249ccc7626f0008c72076/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT=%7BTARGETOPT%7D&deviceId=%7BPSID%7D&advertisingId=%7BPSID%7D&us_privacy=1YNY&samsung_app_domain=%7BAPP_DOMAIN%7D&samsung_app_name=%7BAPP_NAME%7D&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
 
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/6732497f3a61d400087a53b0/colorLogoPNG.png" group-title="Entretenimiento" ,Tu Warnert
+#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/6732497f3a61d400087a53b0/colorLogoPNG.png" group-title="Entretenimiento" ,Tu Warner
 http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/6732497f3a61d400087a53b0/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT=%7BTARGETOPT%7D&deviceId=%7BPSID%7D&advertisingId=%7BPSID%7D&us_privacy=1YNY&samsung_app_domain=%7BAPP_DOMAIN%7D&samsung_app_name=%7BAPP_NAME%7D&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
 
 #EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/0e0759ed-8180-46e7-8fe9-cbc7fa4afbf3/TODO_NOVELAS_-_Logo_1500x1000.png" group-title="Entretenimiento" , Todo Novelas
@@ -416,6 +416,9 @@ https://estrellatv-glewed.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 tvg-chno="26.3" channel-id="roku-417de64d5d2255119088209d40ebfee6" tvg-logo="https://images.sr.roku.com/idType/roku/context/trc/id/417de64d5d2255119088209d40ebfee6/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1652302122079_260x147-center.png" group-title="Entretenimiento" , Estrella Games
 https://live-news-manifest.tubi.video/live-news-manifest/csm/extlive/tubiprd01,Estrella-Games.m3u8
+
+#EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/creok.png",Creo Kids infantiles
+https://live-evg25.tv360.bitel.com.pe/bitel/creokids/playlist.m3u8?uid=6463450
 
 #EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/Pta.png",Planeta TV
 https://live.obslivestream.com/planetatv/index.m3u8
