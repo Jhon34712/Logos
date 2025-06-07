@@ -291,7 +291,7 @@ https://s5.mexside.net:1936/medios/medios/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/tlr.png" group-title="Música",TeleRitmo
 https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/vr.png" group-title="Música",Video Rola
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/vr.png" user-agent="Android 11; moto g(8) power Build/RPES31.Q4U-47-35-12" group-title="Música",Video Rola
 https://d3b2epqdk0p7vd.cloudfront.net/out/v1/8a448b5e16384af4a3c8146a7b049c32/index.m3u8
 
 #EXTINF:-1 group-title="Música" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/vr+.png",VR+
