@@ -424,11 +424,7 @@ https://live-evg25.tv360.bitel.com.pe/bitel/creokids/playlist.m3u8?uid=6463450
 https://live.obslivestream.com/planetatv/index.m3u8
 
 #EXTINF:-1 group-title="DEPORTES" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyaDGIvbQwRa4jPVIH1Tcx1DoviwT2LF5aKw8yGiFq4qiGRb92uMsxI-0&s=10",MDC
-https://otakon.bemtv.cn/STREAM/23613/playlist.m3u8
-#EXTINF:-1 group-title="DEPORTES" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyaDGIvbQwRa4jPVIH1Tcx1DoviwT2LF5aKw8yGiFq4qiGRb92uMsxI-0&s=10",MDC
-https://bigboss.bemtv.cn/STREAM/6808/playlist.m3u8
-#EXTINF:-1 group-title="DEPORTES" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyaDGIvbQwRa4jPVIH1Tcx1DoviwT2LF5aKw8yGiFq4qiGRb92uMsxI-0&s=10",MDC
-https://bigboss.bemtv.cn/STREAM/8110/playlist.m3u8
+https://bigboss.bemtv.cn/STREAM/2103/playlist.m3u8
 
 
 #EXTINF:-1 group-title="DEPORTES" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/AD.png",Azteca Deportes  
