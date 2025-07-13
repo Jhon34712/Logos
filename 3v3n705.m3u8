@@ -11,7 +11,7 @@ https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=6149
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/5.png" group-title="Abierta TV",Canal 5
-https://ottmt.cdn.iutpcdn.com/token=p=52~e=1752441321~h=a1026ae6731120aec11ed51b018065cb/bpk-tv/tp152243/clear/index.m3u8
+https://ottmt.cdn.iutpcdn.com/token=p=52~e=1752516482~h=7d7ac2bd3305b47d43e17ab55730285f/bpk-tv/tp152243/clear/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios CDMX
 https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8
@@ -428,6 +428,9 @@ http://179.51.136.19:8000/play/DSPORTS1/index.m3u8
 
 #EXTINF:-1 group-title="DEPORTES" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/MDC.png",MDC
 https://fl3.moveonjoy.com/TUDN/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 group-title="DEPORTES" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/MDC.png",MDC
+https://ottmt.cdn.iutpcdn.com/token=p=52~e=1752516482~h=7d7ac2bd3305b47d43e17ab55730285f/bpk-tv/tp152243/clear/index.m3u8
 
 #EXTINF:-1 group-title="DEPORTES" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/MDC.png",MDC
 https://smt-usr-edge02.sensa.com.ar/output/Canal8D/output.mpd
