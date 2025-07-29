@@ -387,17 +387,6 @@ https://live-manifest.production-public.tubi.io/live/820271ee-6f31-4557-b429-b82
 #EXTINF:-1 group-title="Entretenimiento" tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/sonycine.png",Sony cine
 https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://images.sr.roku.com/idType/roku/context/trc/id/2f6ef53a89b14266cdf8aaad2f3a0d81/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1723510526011_Roku_SonyOne-CinemaImage-HUD-1_260x147px_1.png" group-title="Entretenimiento", Sony One Cinema
-https://aka-live1049.delivery.roku.com/7f5959a7-57cd-46f8-a715-f90a92ef0300/t2-origin/out/v1/live.m3u8
-
-#EXTINF:-1 tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USAJ3000002OC_20230321T235909SQUARE.png_20230321235909.png" group-title="Entretenimiento",Sony Novelas
-#https://1d523b230b48436fa13d0bfa26aa9fb1.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung_SonyCanalNovelas-1/playlist.m3u8
-https://spt-novelas-2-us.roku.wurl.tv/playlist.m3u8
-
-#EXTINF:-1 tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USAJ3504719A_20230321T235906SQUARE.png_20230321235907.png"  group-title="Entretenimiento" ,Sony One Competencias
-#https://dbrb49pjoymg4.cloudfront.net/10001/99991762/hls/playlist.m3u8?ads.xumo_channelId=99991762
-https://spt-competencias-2-us.roku.wurl.tv/playlist.m3u8
-
 #EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/639751f81a36b400072b8f5a/colorLogoPNG.png"  group-title="Entretenimiento" , Vive Kanal D Drama
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-canelatv/playlist.m3u8
 
