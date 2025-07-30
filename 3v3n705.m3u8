@@ -13,22 +13,22 @@ https://stream.ads.ottera.tv/playlist.m3u8?network_id=6149
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/5.png" group-title="Abierta TV",Canal 5
 https://d2.merichunidya.com:1686/hls/capodeportes.m3u8?md5=Y-Op62AmNvP3k8ehDXpEnQ&expires=1753066476
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios CDMX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",6 CDMX
 https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios Gdl
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",6 Gdl
 https://mdstrm.com/live-stream-playlist/5c54d38ca392a5119bb0aa0d.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios Mty
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",6 Mty
 https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios Laguna
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",6 Laguna
 https://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios Bajio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",6 Bajio
 https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",Multimedios CD Juarez
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/6.png" group-title="Abierta TV",6 CD Juarez
 https://mdstrm.com/live-stream-playlist/5d9e440d675235586a92be7f.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/milenio.png" group-title="Abierta TV",Milenio
@@ -42,9 +42,6 @@ https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81/master.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/a+.png" group-title="Abierta TV",A Más +
 https://mdstrm.com/live-stream-playlist/60b56be1000ea50835fa1e63.m3u8
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e4/Logotipo_de_TV_Azteca.png" group-title="Abierta TV",Azteca Noreste
-https://live.info7.mx/info7/stream.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Jhon34712/Logos/main/mvs.png" group-title="Abierta TV",MVS TV
 https://dish.akamaized.net/Content/HLS_HLS_CLR/Live/channel(mvs)/variant.m3u8
@@ -60,12 +57,6 @@ https://channel08-onlymex.akamaized.net/hls/live/2037034/event01/index.m3u8
 
 #EXTINF:-1 tvg-chno="22.8"id="N+" tvg-logo="https://i.imgur.com/TwBa344.png" group-title="Abierta TV",N+ MTY
 https://channel09-onlymex.akamaized.net/hls/live/2094418/event01/index.m3u8
-
-#EXTINF:-1 tvg-chno="22.5" channel-id="plex-608049aefa2b8ae93c2c3a63-626c288e54f3232400a45f35" tvg-id="608049aefa2b8ae93c2c3a63-626c288e54f3232400a45f35" tvg-logo="https://provider-static.plex.tv/epg/cms/production/e0d70842-cd76-4c63-9774-97925f6bb4fa/MEGANOTICIAS_CLEAN_LOGO_FINAL_White.png" group-title="Abierta TV" , MegaNoticias
-https://pctv-meganoticias-1-mx.tcl.wurl.tv/playlist.m3u8
-
-#EXTINF:-1 tvg-chno="22.15" channel-id="plex-608049aefa2b8ae93c2c3a63-65b1568052aa31b8f64da064" tvg-id="608049aefa2b8ae93c2c3a63-65b1568052aa31b8f64da064" tvg-logo="https://provider-static.plex.tv/epg/cms/production/51402fbd-48ad-4307-a1be-a60c692684f6/Logotipo_C4_En_Alerta_1500x1000_for_dark_backgrounds_-_James_Stowe.png"  group-title="Abierta TV" , C4 en Alerta 
-https://stream.ads.ottera.tv/playlist.m3u8?network_id=6404
 
 #EXTINF:-1 tvg-logo="https://i2.paste.pics/6074e29d2a3241e1f3b3051144274188.png" group-title="Abierta TV",AMX Noticias
 https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8
@@ -84,63 +75,6 @@ https://stream.ads.ottera.tv/playlist.m3u8?network_id=4829
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/99/Estrella_TV_-_2020_logo.png" group-title="Abierta TV",Estrella TV
 https://estrellatv-oando.amagi.tv/playlistR720P.m3u8
-
-#EXTINF:-1 tvg-id="TelevisaAguascalientes.mx" tvg-logo="https://i.imgur.com/etScPo0.png" group-title="Abierta TV",Televisa Aguascalientes (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UC5ZtV3bu3bjSuOLoA6oCFIg.m3u8
-#EXTINF:-1 tvg-id="TelevisaChihuahua.mx" tvg-logo="https://i.imgur.com/Gv75u5Z.png" group-title="Abierta TV",Televisa Chihuahua (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCjfxDe7In59Jbfw2HmIh_Vg.m3u8
-#EXTINF:-1 tvg-id="TelevisaCiudadJuarez.mx" tvg-logo="https://i.imgur.com/KssJGJk.png" group-title="Abierta TV",Televisa Ciudad Juarez (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCot4t8PVKz8TT5xVM8Eb00w.m3u8
-#EXTINF:-1 tvg-id="TelevisaDelBajio.mx" tvg-logo="https://i.imgur.com/YYzZdRE.png" group-title="Abierta TV",Televisa Del Bajio (1080p) [Not 24/7]
-https://yout-ube.com/watch?v=HL8AH-vhuxw
-#EXTINF:-1 tvg-id="TelevisaDelGolfo.mx" tvg-logo="https://i.imgur.com/4SXWCW2.png" group-title="Abierta TV",Televisa Del Golfo (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCQ08tNTPiBn44c975S81ftg.m3u8
-#EXTINF:-1 tvg-id="TelevisaDurango.mx" tvg-logo="https://i.ibb.co/2d7H9Nz/Channels4-profile-8.jpg" group-title="Abierta TV",Televisa Durango (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCON7DvLd5N8tXivc9WqILxQ.m3u8
-#EXTINF:-1 tvg-id="TelevisaEstado.mx" tvg-logo="https://i.imgur.com/BT2ci5E.png" group-title="Abierta TV",Televisa EDO MEX (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UC9DH82HVSf4katwMeUpY80w.m3u8
-#EXTINF:-1 tvg-id="XHSTV.mx" tvg-logo="https://i.imgur.com/TY6ewSv.png" group-title="Abierta TV",Televisa Ensenada (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCFuWAM_YItwkHzDWDKtJULg.m3u8
-#EXTINF:-1 tvg-id="TelevisaGuadalajara.mx" tvg-logo="https://i.imgur.com/Ow0vROp.png" group-title="Abierta TV",Televisa Guadalajara (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCRujF_YxVVFmTRWURQH-Cww.m3u8
-#EXTINF:-1 tvg-id="TelevisaGuerrero.mx" tvg-logo="https://i.imgur.com/STbuBVa.png" group-title="Abierta TV",Televisa Guerrero (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCnxTRk2K1iNsQkgpWXxyj4w.m3u8
-#EXTINF:-1 tvg-id="TelevisaLaguna.mx" tvg-logo="https://i.imgur.com/M2O164z.png" group-title="Abierta TV",Televisa Laguna (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UC_mwCcsKDJLSWjply5s0h8w.m3u8
-#EXTINF:-1 tvg-id="TelevisaMexicali.mx" tvg-logo="https://i.imgur.com/NIEWc2s.jpg" group-title="Abierta TV",Televisa Mexicali (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCcmuFsMIIIHO3LBqeBVfm8Q.m3u8
-#EXTINF:-1 tvg-id="TelevisaMonterrey.mx" tvg-logo="https://i.imgur.com/zQiEsnH.png" group-title="Abierta TV",Televisa Monterrey (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCGDJLLphnP0zQQaE3kgo5Wg.m3u8
-#EXTINF:-1 tvg-id="TelevisaMorelos.mx" tvg-logo="https://i.imgur.com/kt6mB8Y.png" group-title="Abierta TV",Televisa Morelos (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCcC9ykApQrgl4UxbKg2U4zw.m3u8
-#EXTINF:-1 tvg-id="TelevisaNoreste.mx" tvg-logo="https://i.imgur.com/NzSN2jI.png" group-title="Abierta TV",Televisa Noreste (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UC752DYv5vPlTSMrvEjfZXcw.m3u8
-#EXTINF:-1 tvg-id="TelevisaPiedrasNegras.mx" tvg-logo="https://i.imgur.com/MNqBa1f.png" group-title="Abierta TV",Televisa Piedras Negras (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCxK8C1E8UZ5RipNXIBYEvTA.m3u8
-#EXTINF:-1 tvg-id="TelevisaPuebla.mx" tvg-logo="https://i.imgur.com/2dqF5S8.jpg" group-title="Abierta TV",Televisa Puebla (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UC-HNztluSQSffhIWJTL-LUw.m3u8
-#EXTINF:-1 tvg-id="TelevisaQueretaro.mx" tvg-logo="https://i.imgur.com/BKK0kTl.png" group-title="Abierta TV",Televisa Querétaro (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UC9QNz6VS3gGz55dzxAQtgtA.m3u8
-#EXTINF:-1 tvg-id="TelevisaQuintanaRoo.mx" tvg-logo="https://i.ibb.co/W6mQCTV/Channels4-profile-9.jpg" group-title="Abierta TV",Televisa Quintana Roo (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UC37V2K5_sXWqOhoc5WgiXhw.m3u8
-#EXTINF:-1 tvg-id="TelevisaSaltillo.mx" tvg-logo="https://i.ibb.co/Zhm2BDD/Vc-NGCKrw-400x400.jpg" group-title="Abierta TV",Televisa Saltillo (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCpeD73Gb4KjKUL2gyoJ4gLw.m3u8
-#EXTINF:-1 tvg-id="TelevisaSanLuisPotosi.mx" tvg-logo="https://i.imgur.com/oxt91dr.jpg" group-title="Abierta TV",Televisa San Luis Potosí (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCaRuyaHshLdq462E9_pLzdA.m3u8
-#EXTINF:-1 tvg-id="TelevisaSinaloa.mx" tvg-logo="https://i.imgur.com/nZ9HE94.png" group-title="Abierta TV",Televisa Sinaloa (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCtm1LvYEIQ_NrfOUVJ08YhQ.m3u8
-#EXTINF:-1 tvg-id="TelevisaSonora.mx" tvg-logo="https://i.imgur.com/dlV2qX9.png" group-title="Abierta TV",Televisa Sonora (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCyzWMHGS7bs0sot6KZk5EZg.m3u8
-#EXTINF:-1 tvg-id="XEWTTDT.mx" tvg-logo="https://i.imgur.com/GWk6lTX.png" group-title="Abierta TV",Televisa Tijuana (1080p) [Not 24/7]
-https://ythls.armelin.one/channel/UCjwXjnO3BGePtB7gSKEpoqA.m3u8
-#EXTINF:-1 tvg-id="TelevisaVeracruz.mx" tvg-logo="https://i.imgur.com/7UsilfH.png" group-title="Abierta TV",Televisa Veracruz (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UC5EnLdE7ASjYzWt7wvT-QSg.m3u8
-#EXTINF:-1 tvg-id="TelevisaVictoria.mx" tvg-logo="https://i.ibb.co/tX36t1Q/Televisa-Victoria-en-vivo-Online-1.png" group-title="Abierta TV",Televisa Victoria (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCIqGddpV4flOlK3b-hgu9pQ.m3u8
-#EXTINF:-1 tvg-id="TelevisaYucatan.mx" tvg-logo="https://i.ibb.co/sm8Wnwn/IMG-20230724-113929.jpg" group-title="Abierta TV",Televisa Yucatán (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCMIYaH2cLoPS8Hcb-9AA2ZA.m3u8
-#EXTINF:-1 tvg-id="TelevisaZacatecas.mx" tvg-logo="https://i.imgur.com/vkT4zq7.png" group-title="Abierta TV",Televisa Zacatecas (720p) [Not 24/7]
-https://ythls.armelin.one/channel/UCQb3i7gu9J8A4zzQU7j6C1Q.m3u8
 
 #EXTINF:-1 tvg-logo="https://assets.cdn.olympusat.com/wp-content/uploads/2022/08/freetv_8.2_logo-1.png" group-title="Abierta TV",FREE TV 8.2
 https://freetv.stream.olympusatmedia.com:443/index1080p/partial.m3u8
