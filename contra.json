@@ -1,6 +1,20 @@
 {
-  "secret1": "7886",
-  "secret2": "gift",
-  "secret3": "secreto3",
-  "secret4": "secreto4"
+  "passwords": [
+    {
+      "code": "8553",
+      "action": "secret"
+    },
+    {
+      "code": "newgiftcode",
+      "action": "secret2"
+    },
+    {
+      "code": "codeforaccess3",
+      "action": "secret3"
+    },
+    {
+      "code": "supersecure4",
+      "action": "secret4"
+    }
+  ]
 }
