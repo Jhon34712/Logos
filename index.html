@@ -25,33 +25,72 @@
       height: 100%;
       background-color: black;
     }
-    #controls {
+
+    #gearButton {
       position: absolute;
-      bottom: 15px;
-      right: 15px;
+      bottom: 20px;
+      right: 60px;
+      background: rgba(0,0,0,0.5);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
       display: flex;
-      gap: 10px;
+      justify-content: center;
+      align-items: center;
     }
-    button {
-      background: rgba(255,255,255,0.15);
+    #gearButton img {
+      width: 22px;
+      height: 22px;
+      filter: invert(1);
+    }
+
+    #menu {
+      position: absolute;
+      bottom: 70px;
+      right: 20px;
+      background: rgba(0,0,0,0.85);
       color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 8px;
-      padding: 6px 10px;
+      border-radius: 10px;
+      padding: 10px;
+      min-width: 150px;
+      display: none;
+      font-family: sans-serif;
       font-size: 14px;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-section {
+      margin-bottom: 10px;
+    }
+    .menu-section:last-child {
+      margin-bottom: 0;
+    }
+    .menu-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+    .menu-option {
+      padding: 5px 8px;
+      border-radius: 5px;
       cursor: pointer;
     }
-    button:hover {
-      background: rgba(255,255,255,0.3);
+    .menu-option:hover {
+      background: rgba(255,255,255,0.1);
     }
-    select {
-      background: rgba(0,0,0,0.6);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 5px;
-      padding: 4px;
-      font-size: 14px;
+    .menu-option.active {
+      background: rgba(255,255,255,0.2);
     }
+
     #loading {
       position: absolute;
       top: 50%;
@@ -67,13 +106,26 @@
   <div id="loading">Cargando video...</div>
   <video id="video" autoplay controls></video>
 
-  <div id="controls" style="display:none;">
-    <select id="qualitySelect"></select>
-    <select id="audioSelect"></select>
-  </div>
+  <button id="gearButton" title="Opciones">
+    ⚙️
+  </button>
+
+  <div id="menu"></div>
 
   <script>
-    let player;
+    let player, videoTracks = [], audioTracks = [];
+    const gearBtn = document.getElementById("gearButton");
+    const menu = document.getElementById("menu");
+
+    gearBtn.addEventListener("click", () => {
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && e.target !== gearBtn) {
+        menu.style.display = "none";
+      }
+    });
 
     async function initPlayer() {
       const params = new URLSearchParams(location.search);
@@ -89,7 +141,6 @@
       const video = document.getElementById("video");
       player = new shaka.Player(video);
 
-      // Configura DRM ClearKey
       const clearkeys = {};
       clearkeys[id] = key;
 
@@ -106,8 +157,8 @@
       try {
         await player.load(url);
         document.getElementById("loading").style.display = "none";
-        document.getElementById("controls").style.display = "flex";
-        setupTracks();
+        gearBtn.style.display = "block";
+        setupMenu();
       } catch (error) {
         onError(error);
       }
@@ -118,39 +169,60 @@
       document.getElementById("loading").textContent = "Error al cargar el stream.";
     }
 
-    function setupTracks() {
-      const videoTracks = player.getVariantTracks();
-      const audioTracks = player.getAudioLanguages();
+    function setupMenu() {
+      videoTracks = player.getVariantTracks();
+      audioTracks = player.getAudioLanguages();
+      renderMenu();
+    }
 
-      const qSelect = document.getElementById("qualitySelect");
-      const aSelect = document.getElementById("audioSelect");
+    function renderMenu() {
+      menu.innerHTML = "";
 
-      // --- Calidades ---
-      qSelect.innerHTML = "";
-      const uniqueRes = Array.from(new Set(videoTracks.map(t => `${t.height}p`)));
+      // --- Sección de calidad ---
+      const qSection = document.createElement("div");
+      qSection.classList.add("menu-section");
+      const qLabel = document.createElement("label");
+      qLabel.textContent = "Calidad";
+      qSection.appendChild(qLabel);
+
+      const uniqueRes = Array.from(new Set(videoTracks.map(t => t.height))).sort((a,b)=>b-a);
       uniqueRes.forEach(res => {
-        const opt = document.createElement("option");
-        opt.value = res;
-        opt.textContent = res;
-        qSelect.appendChild(opt);
-      });
-      qSelect.addEventListener("change", () => {
-        const res = qSelect.value.replace("p", "");
-        const track = videoTracks.find(t => t.height == res);
-        if (track) player.selectVariantTrack(track, true);
+        const opt = document.createElement("div");
+        opt.classList.add("menu-option");
+        opt.textContent = res + "p";
+        opt.onclick = () => {
+          const track = videoTracks.find(t => t.height == res);
+          if (track) player.selectVariantTrack(track, true);
+          setActive(opt);
+        };
+        qSection.appendChild(opt);
       });
 
-      // --- Pistas de audio ---
-      aSelect.innerHTML = "";
+      // --- Sección de audio ---
+      const aSection = document.createElement("div");
+      aSection.classList.add("menu-section");
+      const aLabel = document.createElement("label");
+      aLabel.textContent = "Audio";
+      aSection.appendChild(aLabel);
+
       audioTracks.forEach(lang => {
-        const opt = document.createElement("option");
-        opt.value = lang;
+        const opt = document.createElement("div");
+        opt.classList.add("menu-option");
         opt.textContent = lang.toUpperCase();
-        aSelect.appendChild(opt);
+        opt.onclick = () => {
+          player.selectAudioLanguage(lang);
+          setActive(opt);
+        };
+        aSection.appendChild(opt);
       });
-      aSelect.addEventListener("change", () => {
-        player.selectAudioLanguage(aSelect.value);
-      });
+
+      menu.appendChild(qSection);
+      menu.appendChild(aSection);
+    }
+
+    function setActive(selected) {
+      menu.querySelectorAll(".menu-option").forEach(opt => opt.classList.remove("active"));
+      selected.classList.add("active");
     }
 
     document.addEventListener("DOMContentLoaded", initPlayer);
