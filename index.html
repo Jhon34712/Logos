@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reproductor DASH ClearKey</title>
 
-  <!-- Shaka Player -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/shaka-player.compiled.js"></script>
+  <!-- Shaka Player con UI -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/shaka-player.ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/controls.min.css" />
 
   <style>
     html, body {
@@ -20,77 +21,16 @@
       justify-content: center;
       align-items: center;
     }
+    #video-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: black;
+    }
     video {
       width: 100%;
       height: 100%;
-      background-color: black;
     }
-
-    #gearButton {
-      position: absolute;
-      bottom: 20px;
-      right: 60px;
-      background: rgba(0,0,0,0.5);
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #gearButton img {
-      width: 22px;
-      height: 22px;
-      filter: invert(1);
-    }
-
-    #menu {
-      position: absolute;
-      bottom: 70px;
-      right: 20px;
-      background: rgba(0,0,0,0.85);
-      color: white;
-      border-radius: 10px;
-      padding: 10px;
-      min-width: 150px;
-      display: none;
-      font-family: sans-serif;
-      font-size: 14px;
-      animation: fadeIn 0.2s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .menu-section {
-      margin-bottom: 10px;
-    }
-    .menu-section:last-child {
-      margin-bottom: 0;
-    }
-    .menu-section label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      font-size: 13px;
-      opacity: 0.8;
-    }
-    .menu-option {
-      padding: 5px 8px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .menu-option:hover {
-      background: rgba(255,255,255,0.1);
-    }
-    .menu-option.active {
-      background: rgba(255,255,255,0.2);
-    }
-
     #loading {
       position: absolute;
       top: 50%;
@@ -103,30 +43,12 @@
   </style>
 </head>
 <body>
-  <div id="loading">Cargando video...</div>
-  <video id="video" autoplay controls></video>
-
-  <button id="gearButton" title="Opciones">
-    ⚙️
-  </button>
-
-  <div id="menu"></div>
+  <div id="video-container">
+    <video id="video" autoplay></video>
+    <div id="loading">Cargando video...</div>
+  </div>
 
   <script>
-    let player, videoTracks = [], audioTracks = [];
-    const gearBtn = document.getElementById("gearButton");
-    const menu = document.getElementById("menu");
-
-    gearBtn.addEventListener("click", () => {
-      menu.style.display = (menu.style.display === "block") ? "none" : "block";
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && e.target !== gearBtn) {
-        menu.style.display = "none";
-      }
-    });
-
     async function initPlayer() {
       const params = new URLSearchParams(location.search);
       const url = params.get("url");
@@ -138,9 +60,15 @@
         return;
       }
 
-      const video = document.getElementById("video");
-      player = new shaka.Player(video);
+      const video = document.getElementById('video');
+      const videoContainer = document.getElementById('video-container');
 
+      // Crea el reproductor con la UI de Shaka
+      const ui = new shaka.ui.Overlay(shaka, videoContainer, video);
+      const controls = ui.getControls();
+      const player = controls.getPlayer();
+
+      // Configura DRM ClearKey
       const clearkeys = {};
       clearkeys[id] = key;
 
@@ -148,81 +76,32 @@
         drm: { clearKeys: clearkeys },
         streaming: {
           bufferingGoal: 15,
-          rebufferingGoal: 5,
+          rebufferingGoal: 5
         }
       });
 
-      player.addEventListener('error', onError);
+      // Personaliza el panel de controles: agrega engrane, fullscreen, etc.
+      ui.configure({
+        controlPanelElements: [
+          'play_pause',
+          'time_and_duration',
+          'spacer',
+          'mute',
+          'volume',
+          'fullscreen',
+          'overflow_menu' // <-- este es el botón ⚙️
+        ],
+        overflowMenuButtons: ['quality', 'audio', 'captions']
+      });
 
       try {
         await player.load(url);
         document.getElementById("loading").style.display = "none";
-        gearBtn.style.display = "block";
-        setupMenu();
+        console.log("✅ Reproduciendo:", url);
       } catch (error) {
-        onError(error);
+        console.error("❌ Error al cargar el video:", error);
+        document.getElementById("loading").textContent = "Error al cargar el stream.";
       }
-    }
-
-    function onError(error) {
-      console.error("❌ Error:", error);
-      document.getElementById("loading").textContent = "Error al cargar el stream.";
-    }
-
-    function setupMenu() {
-      videoTracks = player.getVariantTracks();
-      audioTracks = player.getAudioLanguages();
-      renderMenu();
-    }
-
-    function renderMenu() {
-      menu.innerHTML = "";
-
-      // --- Sección de calidad ---
-      const qSection = document.createElement("div");
-      qSection.classList.add("menu-section");
-      const qLabel = document.createElement("label");
-      qLabel.textContent = "Calidad";
-      qSection.appendChild(qLabel);
-
-      const uniqueRes = Array.from(new Set(videoTracks.map(t => t.height))).sort((a,b)=>b-a);
-      uniqueRes.forEach(res => {
-        const opt = document.createElement("div");
-        opt.classList.add("menu-option");
-        opt.textContent = res + "p";
-        opt.onclick = () => {
-          const track = videoTracks.find(t => t.height == res);
-          if (track) player.selectVariantTrack(track, true);
-          setActive(opt);
-        };
-        qSection.appendChild(opt);
-      });
-
-      // --- Sección de audio ---
-      const aSection = document.createElement("div");
-      aSection.classList.add("menu-section");
-      const aLabel = document.createElement("label");
-      aLabel.textContent = "Audio";
-      aSection.appendChild(aLabel);
-
-      audioTracks.forEach(lang => {
-        const opt = document.createElement("div");
-        opt.classList.add("menu-option");
-        opt.textContent = lang.toUpperCase();
-        opt.onclick = () => {
-          player.selectAudioLanguage(lang);
-          setActive(opt);
-        };
-        aSection.appendChild(opt);
-      });
-
-      menu.appendChild(qSection);
-      menu.appendChild(aSection);
-    }
-
-    function setActive(selected) {
-      menu.querySelectorAll(".menu-option").forEach(opt => opt.classList.remove("active"));
-      selected.classList.add("active");
     }
 
     document.addEventListener("DOMContentLoaded", initPlayer);
