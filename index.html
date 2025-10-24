@@ -1,159 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reproductor DASH ClearKey</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor DASH JW Player</title>
 
-  <!-- Shaka Player -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/shaka-player.compiled.js"></script>
+  <!-- JW Player CDN -->
+  <script src="https://cdn.jwplayer.com/libraries/YOUR_LIBRARY_KEY.js"></script>
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    video {
-      width: 100%;
-      height: 100%;
-      background-color: black;
-    }
-    #controls {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      display: flex;
-      gap: 10px;
-    }
-    button {
-      background: rgba(255,255,255,0.15);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: rgba(255,255,255,0.3);
-    }
-    select {
-      background: rgba(0,0,0,0.6);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 5px;
-      padding: 4px;
-      font-size: 14px;
-    }
-    #loading {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-    }
+    html, body { margin: 0; padding: 0; height: 100%; width: 100%; background:black; display:flex; justify-content:center; align-items:center;}
+    #player { width:100%; height:100%; }
   </style>
 </head>
 <body>
-  <div id="loading">Cargando video...</div>
-  <video id="video" autoplay controls></video>
-
-  <div id="controls" style="display:none;">
-    <select id="qualitySelect"></select>
-    <select id="audioSelect"></select>
-  </div>
+  <div id="player"></div>
 
   <script>
-    let player;
+    // --- Parámetros de URL ---
+    const params = new URLSearchParams(location.search);
+    const url = params.get("url");
+    const id = params.get("id");
+    const key = params.get("k");
 
-    async function initPlayer() {
-      const params = new URLSearchParams(location.search);
-      const url = params.get("url");
-      const id = params.get("id");
-      const key = params.get("k");
-
-      if (!url || !id || !key) {
-        document.getElementById("loading").textContent = "Faltan parámetros ?url= &id= &k=";
-        return;
-      }
-
-      const video = document.getElementById("video");
-      player = new shaka.Player(video);
-
-      // Configura DRM ClearKey
-      const clearkeys = {};
-      clearkeys[id] = key;
-
-      player.configure({
-        drm: { clearKeys: clearkeys },
-        streaming: {
-          bufferingGoal: 15,
-          rebufferingGoal: 5,
-        }
+    if(!url || !id || !key){
+      document.body.innerHTML = "<h2 style='color:white;'>Faltan parámetros ?url= &id= &k=</h2>";
+    } else {
+      // --- Inicializa JW Player ---
+      jwplayer("player").setup({
+        file: url,
+        type: "dash",
+        width: "100%",
+        height: "100%",
+        drm: {
+          clearkey: {
+            [id]: key
+          }
+        },
+        controls: true,
+        autostart: true
       });
 
-      player.addEventListener('error', onError);
+      // --- Detectar pistas de audio y calidad ---
+      jwplayer().on('ready', function() {
+        console.log("✅ Video cargado");
 
-      try {
-        await player.load(url);
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("controls").style.display = "flex";
-        setupTracks();
-      } catch (error) {
-        onError(error);
-      }
-    }
-
-    function onError(error) {
-      console.error("❌ Error:", error);
-      document.getElementById("loading").textContent = "Error al cargar el stream.";
-    }
-
-    function setupTracks() {
-      const videoTracks = player.getVariantTracks();
-      const audioTracks = player.getAudioLanguages();
-
-      const qSelect = document.getElementById("qualitySelect");
-      const aSelect = document.getElementById("audioSelect");
-
-      // --- Calidades ---
-      qSelect.innerHTML = "";
-      const uniqueRes = Array.from(new Set(videoTracks.map(t => `${t.height}p`)));
-      uniqueRes.forEach(res => {
-        const opt = document.createElement("option");
-        opt.value = res;
-        opt.textContent = res;
-        qSelect.appendChild(opt);
-      });
-      qSelect.addEventListener("change", () => {
-        const res = qSelect.value.replace("p", "");
-        const track = videoTracks.find(t => t.height == res);
-        if (track) player.selectVariantTrack(track, true);
-      });
-
-      // --- Pistas de audio ---
-      aSelect.innerHTML = "";
-      audioTracks.forEach(lang => {
-        const opt = document.createElement("option");
-        opt.value = lang;
-        opt.textContent = lang.toUpperCase();
-        aSelect.appendChild(opt);
-      });
-      aSelect.addEventListener("change", () => {
-        player.selectAudioLanguage(aSelect.value);
+        // JW Player maneja automáticamente cambio de calidad si el manifest DASH lo soporta
+        // y también permite cambiar pista de audio desde su control nativo
+        // Opcional: puedes crear un menú externo para forzar cambios
       });
     }
-
-    document.addEventListener("DOMContentLoaded", initPlayer);
   </script>
 </body>
 </html>
