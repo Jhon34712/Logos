@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reproductor DASH ClearKey</title>
 
-  <!-- Shaka Player con UI -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/shaka-player.ui.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/controls.min.css" />
+  <!-- Shaka Player -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.0/shaka-player.compiled.js"></script>
 
   <style>
     html, body {
@@ -21,15 +20,37 @@
       justify-content: center;
       align-items: center;
     }
-    #video-container {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      background: black;
-    }
     video {
       width: 100%;
       height: 100%;
+      background-color: black;
+    }
+    #controls {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    select {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 5px;
+      padding: 4px;
+      font-size: 14px;
     }
     #loading {
       position: absolute;
@@ -43,12 +64,17 @@
   </style>
 </head>
 <body>
-  <div id="video-container">
-    <video id="video" autoplay></video>
-    <div id="loading">Cargando video...</div>
+  <div id="loading">Cargando video...</div>
+  <video id="video" autoplay controls></video>
+
+  <div id="controls" style="display:none;">
+    <select id="qualitySelect"></select>
+    <select id="audioSelect"></select>
   </div>
 
   <script>
+    let player;
+
     async function initPlayer() {
       const params = new URLSearchParams(location.search);
       const url = params.get("url");
@@ -60,13 +86,8 @@
         return;
       }
 
-      const video = document.getElementById('video');
-      const videoContainer = document.getElementById('video-container');
-
-      // Crea el reproductor con la UI de Shaka
-      const ui = new shaka.ui.Overlay(shaka, videoContainer, video);
-      const controls = ui.getControls();
-      const player = controls.getPlayer();
+      const video = document.getElementById("video");
+      player = new shaka.Player(video);
 
       // Configura DRM ClearKey
       const clearkeys = {};
@@ -76,32 +97,60 @@
         drm: { clearKeys: clearkeys },
         streaming: {
           bufferingGoal: 15,
-          rebufferingGoal: 5
+          rebufferingGoal: 5,
         }
       });
 
-      // Personaliza el panel de controles: agrega engrane, fullscreen, etc.
-      ui.configure({
-        controlPanelElements: [
-          'play_pause',
-          'time_and_duration',
-          'spacer',
-          'mute',
-          'volume',
-          'fullscreen',
-          'overflow_menu' // <-- este es el botón ⚙️
-        ],
-        overflowMenuButtons: ['quality', 'audio', 'captions']
-      });
+      player.addEventListener('error', onError);
 
       try {
         await player.load(url);
         document.getElementById("loading").style.display = "none";
-        console.log("✅ Reproduciendo:", url);
+        document.getElementById("controls").style.display = "flex";
+        setupTracks();
       } catch (error) {
-        console.error("❌ Error al cargar el video:", error);
-        document.getElementById("loading").textContent = "Error al cargar el stream.";
+        onError(error);
       }
+    }
+
+    function onError(error) {
+      console.error("❌ Error:", error);
+      document.getElementById("loading").textContent = "Error al cargar el stream.";
+    }
+
+    function setupTracks() {
+      const videoTracks = player.getVariantTracks();
+      const audioTracks = player.getAudioLanguages();
+
+      const qSelect = document.getElementById("qualitySelect");
+      const aSelect = document.getElementById("audioSelect");
+
+      // --- Calidades ---
+      qSelect.innerHTML = "";
+      const uniqueRes = Array.from(new Set(videoTracks.map(t => `${t.height}p`)));
+      uniqueRes.forEach(res => {
+        const opt = document.createElement("option");
+        opt.value = res;
+        opt.textContent = res;
+        qSelect.appendChild(opt);
+      });
+      qSelect.addEventListener("change", () => {
+        const res = qSelect.value.replace("p", "");
+        const track = videoTracks.find(t => t.height == res);
+        if (track) player.selectVariantTrack(track, true);
+      });
+
+      // --- Pistas de audio ---
+      aSelect.innerHTML = "";
+      audioTracks.forEach(lang => {
+        const opt = document.createElement("option");
+        opt.value = lang;
+        opt.textContent = lang.toUpperCase();
+        aSelect.appendChild(opt);
+      });
+      aSelect.addEventListener("change", () => {
+        player.selectAudioLanguage(aSelect.value);
+      });
     }
 
     document.addEventListener("DOMContentLoaded", initPlayer);
