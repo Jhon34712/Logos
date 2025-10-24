@@ -25,6 +25,33 @@
       height: 100%;
       background-color: black;
     }
+    #controls {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    select {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 5px;
+      padding: 4px;
+      font-size: 14px;
+    }
     #loading {
       position: absolute;
       top: 50%;
@@ -40,7 +67,14 @@
   <div id="loading">Cargando video...</div>
   <video id="video" autoplay controls></video>
 
+  <div id="controls" style="display:none;">
+    <select id="qualitySelect"></select>
+    <select id="audioSelect"></select>
+  </div>
+
   <script>
+    let player;
+
     async function initPlayer() {
       const params = new URLSearchParams(location.search);
       const url = params.get("url");
@@ -53,7 +87,7 @@
       }
 
       const video = document.getElementById("video");
-      const player = new shaka.Player(video);
+      player = new shaka.Player(video);
 
       // Configura DRM ClearKey
       const clearkeys = {};
@@ -67,14 +101,56 @@
         }
       });
 
+      player.addEventListener('error', onError);
+
       try {
         await player.load(url);
         document.getElementById("loading").style.display = "none";
-        console.log("✅ Reproduciendo:", url);
+        document.getElementById("controls").style.display = "flex";
+        setupTracks();
       } catch (error) {
-        console.error("❌ Error al cargar el video:", error);
-        document.getElementById("loading").textContent = "Error al cargar el stream.";
+        onError(error);
       }
+    }
+
+    function onError(error) {
+      console.error("❌ Error:", error);
+      document.getElementById("loading").textContent = "Error al cargar el stream.";
+    }
+
+    function setupTracks() {
+      const videoTracks = player.getVariantTracks();
+      const audioTracks = player.getAudioLanguages();
+
+      const qSelect = document.getElementById("qualitySelect");
+      const aSelect = document.getElementById("audioSelect");
+
+      // --- Calidades ---
+      qSelect.innerHTML = "";
+      const uniqueRes = Array.from(new Set(videoTracks.map(t => `${t.height}p`)));
+      uniqueRes.forEach(res => {
+        const opt = document.createElement("option");
+        opt.value = res;
+        opt.textContent = res;
+        qSelect.appendChild(opt);
+      });
+      qSelect.addEventListener("change", () => {
+        const res = qSelect.value.replace("p", "");
+        const track = videoTracks.find(t => t.height == res);
+        if (track) player.selectVariantTrack(track, true);
+      });
+
+      // --- Pistas de audio ---
+      aSelect.innerHTML = "";
+      audioTracks.forEach(lang => {
+        const opt = document.createElement("option");
+        opt.value = lang;
+        opt.textContent = lang.toUpperCase();
+        aSelect.appendChild(opt);
+      });
+      aSelect.addEventListener("change", () => {
+        player.selectAudioLanguage(aSelect.value);
+      });
     }
 
     document.addEventListener("DOMContentLoaded", initPlayer);
