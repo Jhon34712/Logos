@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reproductor Universal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css">
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; color: white; font-family: sans-serif; }
+        /* El contenedor debe ocupar toda la pantalla */
+        .player-container { width: 100vw; height: 100vh; position: relative; }
+        video { width: 100%; height: 100%; }
+        
+        /* Mensaje de error visible para entender qué pasa */
+        #error-msg {
+            position: absolute;
+            top: 20px; left: 20px;
+            background: rgba(255,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            display: none; /* Oculto por defecto */
+            z-index: 1000;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="error-msg"></div>
+
+    <div class="player-container" data-shaka-player-container>
+        <video autoplay data-shaka-player id="video"></video>
+    </div>
+
+    <script>
+        const showError = (msg) => {
+            const errDiv = document.getElementById('error-msg');
+            errDiv.style.display = 'block';
+            errDiv.innerText = "⚠️ ERROR: " + msg;
+        };
+
+        async function init() {
+            // 1. Leer datos de la URL
+            const params = new URLSearchParams(window.location.search);
+            const mpd = params.get('mpd');
+            const kid = params.get('kid');
+            const key = params.get('key');
+
+            if (!mpd) {
+                showError("No se encontró el link del video (MPD) en la URL.");
+                return;
+            }
+
+            // 2. Configurar Player
+            const video = document.getElementById('video');
+            const ui = video['ui'];
+            const controls = ui.getControls();
+            const player = controls.getPlayer();
+
+            // Manejo de errores de Shaka
+            player.addEventListener('error', (event) => {
+                showError("Error del Player: Código " + event.detail.code);
+                console.error('Error code', event.detail.code, 'object', event.detail);
+            });
+
+            const config = {
+                preferredAudioLanguage: 'es', 
+            };
+
+            // Solo agregamos DRM si hay claves (para permitir canales abiertos también)
+            if (kid && key) {
+                const clearKeys = {};
+                clearKeys[kid] = key;
+                config.drm = { clearKeys: clearKeys };
+            }
+
+            player.configure(config);
+
+            try {
+                console.log("Intentando cargar:", mpd);
+                await player.load(mpd);
+                console.log('Video cargado. Iniciando...');
+            } catch (e) {
+                showError("No se pudo cargar el video. Verifica tu conexión o si el link/claves han expirado.");
+                console.error('Error load:', e);
+            }
+        }
+
+        document.addEventListener('shaka-ui-loaded', init);
+    </script>
+</body>
+</html>
