@@ -1,85 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title></title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- STEP 1 - SDK Installation-->
-  <script src="https://cdn.bitmovin.com/player/web/8/bitmovinplayer.js" type="text/javascript"></script>
-  
+  <title>Bitmovin Player Demo</title>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8" />
+
+  <!-- Bitmovin Player -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js"></script>
+
   <style>
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    background: black;
-}
-
-#my-player {
-    width: 100%;
-    height: 100vh; /* Ocupa toda la pantalla */
-}
-</style>
-  
-</head>
-
-<body>
-
-  <!-- STEP 2 - Provide a player container element-->
-  <div id="my-player"></div>
-
-  <script>
-    //<!-- STEP 3 - Configure and Initialize the player-->
-    var playerConfig = {
-    key: "84bc58bb-3878-4a1a-80b3-a5d4b609d607",
-
-    network: {
-        preprocessHttpRequest: function(type, request) {
-
-            request.headers["User-Agent"] = "";
-            request.headers["Referer"] = "";
-
-            return Promise.resolve(request);
-        }
+    .player-wrapper {
+      width: 90%;
+      margin: 20px auto;
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
     }
-};
+  </style>
+</head>
+<body>
+<div class="player-wrapper">
+  <div id="player"></div>
+</div>
 
-var player = new bitmovin.player.Player(
-    document.getElementById("my-player"),
-    playerConfig
-);
-    
-    var container = document.getElementById('my-player');
-    var player = new bitmovin.player.Player(container, playerConfig);
-    //<!-- STEP 4 - Configure and load a Source for the player -->
-    var sourceConfig = {
-  "dash": "https://dish.akamaized.net/Content/DASH/Live/channel(lamejortv)/variant.mpd",
-  "description": "desc",
-  "drm": {
-    "clearkey": [{
-      "key":"e90f6285f91d17e15169aec5c7b690ab",
-      "kid":"c8ee9edbc1479b4f3756da7d54d23dce"
-    }]
-  },
-  "title":"title-of-video"
-}
-    player.load(sourceConfig).then(function() {
-      console.log('Successfully loaded Source Config!');
-      var enSubtitle = {
-        id: "sub1",
-        lang: "en",
-        label: "English",
-        url: "https://sudongstorageaccount.blob.core.windows.net/aapublic/mcjw-subs.vtt",
-        kind: "subtitle"
-      };
-      player.subtitles.add(enSubtitle);
-    }).catch(function(reason) {
-      console.log('Error while loading source:', reason);
-    });
-  </script>
+<script type="text/javascript">
+  var conf = {
+    key: '84bc58bb-3878-4a1a-80b3-a5d4b609d607',
+    analytics: {
+      key: '47269113-e618-474b-90da-7fe1ed256c45',
+      title: 'Art of Motion',
+      videoId: 'wizard-Art_of_Motion-1785854755510',
+    },
+  };
+
+  var source = {
+    title: 'Art of Motion',
+    dash: 'https://cdn.bitmovin.com/content/assets/art-of-motion-dash-hls-progressive/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
+		drm: {
+      widevine: {},
+    },
+  };
+
+  var player = new bitmovin.player.Player(document.getElementById('player'), conf);
+  player.load(source);
+</script>
+
 </body>
-
 </html>
