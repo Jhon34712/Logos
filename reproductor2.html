@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Bitmovin SDK - Getting Started WEB SDK</title>
+  <title></title>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,39 +34,44 @@ html, body {
   <script>
     //<!-- STEP 3 - Configure and Initialize the player-->
     var playerConfig = {
-      "key": "89f6ed6c-ab0e-46c2-ac47-5665e60c3c41",
-      //"advertising": {
-      //   "adBreaks": [
-      //     {
-      //       "tag": {
-      //         "type": "vast",
-      //         "url": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator="
-      //       }
-      //     }
-      //   ]
-      // }
+    key: "89f6ed6c-ab0e-46c2-ac47-5665e60c3c41",
+
+    network: {
+        preprocessHttpRequest: function(type, request) {
+
+            request.headers["User-Agent"] = "";
+            request.headers["Referer"] = "";
+
+            return Promise.resolve(request);
+        }
     }
+};
+
+var player = new bitmovin.player.Player(
+    document.getElementById("my-player"),
+    playerConfig
+);
+    
     var container = document.getElementById('my-player');
     var player = new bitmovin.player.Player(container, playerConfig);
     //<!-- STEP 4 - Configure and load a Source for the player -->
     var sourceConfig = {
-      "title": "Default Demo Source Config",
-      "description": "Select another example in \"Step 4 - Load a Source\" to test it here",
-      "hls": "https://signal.teleon.live/stream/canal4sv.m3u8?token=free",
-      // "smooth": "https://test.playready.microsoft.com/smoothstreaming/SSWSS720H264/SuperSpeedway_720.ism/manifest",
-      //"progressive": "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/MI201109210084_mpeg-4_hd_high_1080p25_10mbits.mp4",
-      //"poster": "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
-    }
+  "dash": "https://dish.akamaized.net/Content/DASH/Live/channel(lamejortv)/variant.mpd",
+  "description": "desc",
+  "drm": {
+    "clearkey": [{
+      "key":"e90f6285f91d17e15169aec5c7b690ab",
+      "kid":"c8ee9edbc1479b4f3756da7d54d23dce"
+    }]
+  },
+  "title":"title-of-video"
+}
     player.load(sourceConfig).then(function() {
       console.log('Successfully loaded Source Config!');
       var enSubtitle = {
         id: "sub1",
         lang: "en",
         label: "English",
-        //url: "https://bitdash-a.akamaihd.net/content/sintel/subtitles/subtitles_en.vtt",
-        //url: "https://sudongstorageaccount.blob.core.windows.net/aapublic/ignite.vtt", 
-        //url: "https://sudongstorageaccount.blob.core.windows.net/aapublic/ignite.vtt?sp=r&st=2022-04-22T03:59:11Z&se=2022-04-22T11:59:11Z&spr=https&sv=2020-08-04&sr=b&sig=gNaCXq4zM89szNTNfqdkhKfVEPWdGFnsHPqD0%2BGas%2B8%3D",  
-        // url: "https://fliikaimages.azureedge.net/subtitles/mcjw/mcjw-subs.vtt",
         url: "https://sudongstorageaccount.blob.core.windows.net/aapublic/mcjw-subs.vtt",
         kind: "subtitle"
       };
