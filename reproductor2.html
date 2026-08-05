@@ -33,10 +33,13 @@
 
   var source = {
     title: 'Art of Motion',
-    dash: 'https://cdn.bitmovin.com/content/assets/art-of-motion-dash-hls-progressive/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
-		drm: {
-      widevine: {},
-    },
+    dash: 'https://live-pv-ta.amazon.fastly-edge.com/iad-nitro/live/clients/dash/enc/qej0n9zmvv/out/v1/93a227dbeef84293b95683c10fd88da2/cenc.mpd',
+		  "drm": {
+    "clearkey": [{
+      "key":"391ad12844fdb7c127e2c7ba23582b3b",
+      "kid":"6c9b3103cd519fcad556e84f918998cd"
+    }]
+  },
   };
 
   var player = new bitmovin.player.Player(document.getElementById('player'), conf);
