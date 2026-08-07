@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>MI IPTV — Modern Player</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --orange:#ff6500;
+ --bg:#050505;
+ --panel:#101010;
+ --line:#242424;
+ --sidebar:245px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;background:#000;color:#fff;font-family:"Plus Jakarta Sans",Arial,sans-serif;overflow:hidden}
+.app{display:flex;width:100%;height:100%}
+
+/* ===== LISTA ===== */
+.sidebar{
+ width:var(--sidebar);flex:0 0 var(--sidebar);height:100%;
+ background:#050505;border-right:1px solid #181818;
+ display:flex;flex-direction:column;z-index:30;
+}
+.brand{padding:18px 14px 12px}
+.brand h1{margin:0;font-size:12px;line-height:1.5;letter-spacing:1.8px;font-weight:800}
+.brand span{color:var(--orange)}
+.search{padding:0 11px 10px}
+.searchbox{
+ display:flex;align-items:center;background:#111;border:1px solid #222;
+ border-radius:7px;padding:8px 10px;
+}
+.searchbox:focus-within{border-color:#75401e}
+.searchbox span{color:#666;font-size:17px}
+.searchbox input{width:100%;border:0;outline:0;background:transparent;color:#fff;font:11px "Plus Jakarta Sans";margin-left:7px}
+.searchbox input::placeholder{color:#555}
+.filebar{display:flex;gap:6px;padding:0 11px 10px}
+.filebar button{
+ flex:1;border:1px solid #282828;background:#111;color:#aaa;border-radius:6px;
+ padding:7px 4px;font:600 9px "Plus Jakarta Sans";cursor:pointer
+}
+.filebar button:hover{border-color:var(--orange);color:#fff}
+.playlist{flex:1;overflow-y:auto;padding:4px 9px 15px}
+.item{
+ display:flex;align-items:center;gap:9px;padding:7px 9px;margin:2px 0;
+ border-left:3px solid transparent;border-radius:6px;cursor:pointer
+}
+.item:hover{background:#121212}
+.item.active{background:#17120e;border-left-color:var(--orange)}
+.logo{width:30px;height:30px;object-fit:contain;background:#000;border-radius:5px;flex:none}
+.name{font-size:10px;color:#777;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item.active .name{color:#fff;font-weight:600}
+.empty{text-align:center;color:#555;font-size:10px;padding:25px 10px;display:none}
+
+/* ===== VIDEO ===== */
+.viewer{position:relative;flex:1;min-width:0;height:100%;background:#000;display:flex;align-items:center;justify-content:center}
+video{width:100%;height:100%;object-fit:contain;background:#000}
+
+.info{
+ position:absolute;left:18px;top:16px;z-index:5;display:flex;align-items:center;gap:9px;
+ padding:7px 12px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.06);
+ border-radius:10px;backdrop-filter:blur(12px);max-width:calc(100% - 36px)
+}
+.info img{width:30px;height:30px;object-fit:contain}
+.info span{font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ===== CONTROLES ESTILO ORIGINAL ===== */
+.controls{display:none}
+.control{
+ width:42px;height:50px;border:0;background:none;color:#fff;
+ display:flex;align-items:center;justify-content:center;cursor:pointer;
+ transition:.15s;padding:0
+}
+.control:hover{color:var(--orange);transform:scale(1.08)}
+.arrow{
+ width:19px;height:19px;border-top:4px solid currentColor;border-right:4px solid currentColor;
+}
+.prev .arrow{transform:rotate(-135deg)}
+.next .arrow{transform:rotate(45deg)}
+.pause{
+ width:20px;height:45px;border:0;position:relative
+}
+.pause:before,.pause:after{
+ content:"";position:absolute;top:3px;width:8px;height:43px;background:var(--orange);border-radius:4px
+}
+.pause:before{left:0}.pause:after{right:0}
+.playTriangle{
+ width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;
+ border-left:20px solid var(--orange);margin-left:4px
+}
+.separator{height:50px;width:1px;background:#383838;margin:0 2px}
+.volumeWrap{display:flex;align-items:center;gap:14px}
+.speaker{position:relative;width:30px;height:32px}
+.speaker:before{
+ content:"";position:absolute;left:0;top:10px;width:8px;height:13px;background:#fff;border-radius:2px
+}
+.speaker:after{
+ content:"";position:absolute;left:7px;top:5px;border-top:11px solid transparent;border-bottom:11px solid transparent;border-right:14px solid #fff
+}
+.waves{position:absolute;left:18px;top:5px;width:12px;height:22px;border-right:3px solid #fff;border-radius:50%}
+.waves2{position:absolute;left:23px;top:2px;width:17px;height:28px;border-right:3px solid #fff;border-radius:50%}
+.volumeRange{width:155px;accent-color:var(--orange);cursor:pointer}
+.full{
+ width:38px;height:38px;border:4px solid #fff;border-radius:6px;
+ border-left-color:transparent;border-bottom-color:transparent;position:relative
+}
+.full:after{content:"";position:absolute;left:-4px;bottom:-4px;width:15px;height:15px;border-left:4px solid #fff;border-bottom:4px solid #fff}
+.status{
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+ color:#777;font-size:12px;z-index:2;pointer-events:none;text-align:center
+}
+
+/* ===== BOTÓN MÓVIL PARA MOSTRAR LISTA ===== */
+.listBtn{
+ display:none;position:absolute;top:12px;left:12px;z-index:25;
+ background:rgba(15,15,15,.9);border:1px solid #333;color:#fff;border-radius:8px;
+ padding:8px 11px;font-size:16px
+}
+
+
+/* ===== MODO VIDEO: OCULTAR / MOSTRAR LISTA ===== */
+.sidebar{
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s ease;
+}
+
+.viewer{
+    transition:width .35s cubic-bezier(.2,.8,.2,1);
+    cursor:pointer;
+}
+
+.app.videoFull .sidebar{
+    transform:translateX(-105%);
+    opacity:0;
+    pointer-events:none;
+}
+
+.app.videoFull .viewer{
+    width:100vw;
+}
+
+.app.videoFull .info{
+    opacity:0;
+    pointer-events:none;
+}
+
+
+/* ===== TOGGLE DE LISTA AL TOCAR EL REPRODUCTOR ===== */
+.sidebar{
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s ease;
+}
+
+.viewer{
+    position:relative;
+    cursor:pointer;
+    transition: width .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.app.videoFull .sidebar{
+    transform:translateX(-110%);
+    opacity:0;
+    pointer-events:none;
+}
+
+.app.videoFull .viewer{
+    width:100vw;
+    flex:1 1 100%;
+}
+
+.app.videoFull .info{
+    opacity:0;
+    pointer-events:none;
+}
+
+/* ===== MÓVIL ===== */
+@media(max-width:800px){
+ .sidebar{
+  position:absolute;left:0;top:0;height:100%;width:280px;
+  transform:translateX(0);box-shadow:12px 0 40px #000;
+  transition:transform .25s ease
+ }
+ .app.listHidden .sidebar{transform:translateX(-105%)}
+ .listBtn{display:block}
+ .controls{
+  min-width:0;width:calc(100% - 28px);height:72px;bottom:18px;
+  padding:0 20px;gap:15px;border-radius:40px
+ }
+ .volumeRange{width:75px}
+ .volumeWrap{gap:7px}
+ .separator{height:40px}
+ .control{width:32px}
+ .pause{height:36px}.pause:before,.pause:after{height:36px;width:7px}
+ .info{top:10px;left:55px}
+}
+</style>
+</head>
+
+<body>
+<div class="app" id="app">
+
+ <aside class="sidebar">
+  <div class="brand">
+   <h1>MI IPTV<span>.NET</span><br>CANALES IPTV LOCAL</h1>
+  </div>
+
+  <div class="search">
+   <div class="searchbox">
+    <span>⌕</span>
+    <input id="search" placeholder="Buscar canal..." autocomplete="off">
+   </div>
+  </div>
+
+  <div class="filebar">
+   <button id="fileBtn">📁 CARGAR M3U</button>
+   <button id="urlBtn">🌐 URL M3U</button>
+   <input id="fileInput" type="file" accept=".m3u,.m3u8,.txt" hidden>
+  </div>
+
+  <div class="playlist" id="playlist"></div>
+  <div class="empty" id="empty">No se encontraron canales.</div>
+ </aside>
+
+ <main class="viewer">
+  <button class="listBtn" id="listBtn">☰</button>
+
+  <video id="video" playsinline></video>
+
+  <div class="status" id="status">Carga una lista M3U o selecciona un canal</div>
+
+  <div class="info">
+   <img id="currentLogo" alt="">
+   <span id="currentName">Sin canal seleccionado</span>
+  </div>
+
+  <div class="controls">
+
+   <button class="control prev" id="prevBtn" title="Canal anterior">
+    <span class="arrow"></span>
+   </button>
+
+   <button class="control" id="playBtn" title="Reproducir / pausar">
+    <span class="pause" id="pauseIcon"></span>
+   </button>
+
+   <button class="control next" id="nextBtn" title="Siguiente canal">
+    <span class="arrow"></span>
+   </button>
+
+   <span class="separator"></span>
+
+   <div class="volumeWrap">
+    <button class="control" id="muteBtn" title="Silenciar">
+     <span class="speaker"><i class="waves"></i><i class="waves2"></i></span>
+    </button>
+    <input class="volumeRange" id="volume" type="range" min="0" max="1" step=".01" value="1">
+   </div>
+
+   <button class="control" id="fullscreenBtn" title="Pantalla completa">
+    <span class="full"></span>
+   </button>
+
+  </div>
+ </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest">
+/* ========================================================
+   TOCAR EL REPRODUCTOR = OCULTAR / MOSTRAR LISTA
+======================================================== */
+
+const viewerArea = document.querySelector(".viewer");
+
+viewerArea.addEventListener("click", function(e){
+    /* El cambio de vista se hace únicamente cuando ya hay un canal */
+    if(currentIndex === -1) return;
+
+    /* Si el clic cae sobre la etiqueta superior, también cuenta como toque */
+    app.classList.toggle("videoFull");
+});
+
+/* ESC vuelve a mostrar la lista */
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+        app.classList.remove("videoFull");
+    }
+});
+
+
+</script>
+<script>
+/*
+=========================================================
+ CARGA DE M3U
+=========================================================
+ Puedes:
+ 1) Seleccionar un archivo .m3u desde "CARGAR M3U"
+ 2) Introducir una URL pública desde "URL M3U"
+
+ Formato compatible:
+ #EXTINF:-1 tvg-logo="logo.png" group-title="Deportes",ESPN
+ https://servidor/espn.m3u8
+*/
+
+let canales = [];
+let visibles = [];
+let currentIndex = -1;
+let hls = null;
+
+const app = document.getElementById("app");
+const playlist = document.getElementById("playlist");
+const empty = document.getElementById("empty");
+const search = document.getElementById("search");
+const video = document.getElementById("video");
+const status = document.getElementById("status");
+const currentName = document.getElementById("currentName");
+const currentLogo = document.getElementById("currentLogo");
+
+function limpiar(text){
+ return String(text || "").replace(/[<>]/g,"").trim();
+}
+
+function parseM3U(text){
+ const lines = text.replace(/^\uFEFF/,"").split(/\r?\n/);
+ const result = [];
+ let info = null;
+
+ for(let i=0;i<lines.length;i++){
+  const line = lines[i].trim();
+  if(!line) continue;
+
+  if(line.toUpperCase().startsWith("#EXTINF")){
+   const comma = line.indexOf(",");
+   const title = comma >= 0 ? line.slice(comma+1).trim() : "Canal";
+
+   const logoMatch = line.match(/tvg-logo\s*=\s*["']([^"']*)["']/i);
+   const groupMatch = line.match(/group-title\s*=\s*["']([^"']*)["']/i);
+   const idMatch = line.match(/tvg-id\s*=\s*["']([^"']*)["']/i);
+
+   info = {
+    nombre: limpiar(title) || "Canal",
+    logo: logoMatch ? logoMatch[1].trim() : "",
+    grupo: groupMatch ? groupMatch[1].trim() : "",
+    id: idMatch ? idMatch[1].trim() : ""
+   };
+   continue;
+  }
+
+  if(!line.startsWith("#") && info){
+   result.push({...info,url:line});
+   info = null;
+  }
+ }
+
+ return result;
+}
+
+function render(){
+ const q = search.value.toLowerCase().trim();
+
+ visibles = canales.filter(c =>
+  c.nombre.toLowerCase().includes(q) ||
+  c.grupo.toLowerCase().includes(q)
+ );
+
+ playlist.innerHTML = "";
+ empty.style.display = visibles.length ? "none" : "block";
+
+ visibles.forEach((canal,i)=>{
+  const item = document.createElement("div");
+  item.className = "item";
+
+  const img = document.createElement("img");
+  img.className = "logo";
+  img.src = canal.logo || "";
+  img.alt = "";
+  img.onerror = ()=>{ img.style.visibility="hidden"; };
+
+  const name = document.createElement("span");
+  name.className = "name";
+  name.textContent = canal.nombre;
+
+  item.append(img,name);
+
+  item.onclick = ()=>{
+   const realIndex = canales.indexOf(canal);
+   reproducir(realIndex);
+   document.querySelectorAll(".item").forEach(x=>x.classList.remove("active"));
+   item.classList.add("active");
+  };
+
+  if(canales.indexOf(canal) === currentIndex) item.classList.add("active");
+  playlist.appendChild(item);
+ });
+}
+
+function marcarActual(){
+ document.querySelectorAll(".item").forEach(item=>item.classList.remove("active"));
+ const visibleIndex = visibles.findIndex(c=>canales.indexOf(c)===currentIndex);
+ if(visibleIndex >= 0){
+  const item = playlist.children[visibleIndex];
+  if(item){
+   item.classList.add("active");
+   item.scrollIntoView({block:"nearest",behavior:"smooth"});
+  }
+ }
+}
+
+function reproducir(index){
+ if(index < 0 || index >= canales.length) return;
+
+ currentIndex = index;
+ const canal = canales[index];
+
+ currentName.textContent = canal.nombre;
+ currentLogo.src = canal.logo || "";
+ status.textContent = "Cargando...";
+ status.style.display = "block";
+
+ if(hls){ hls.destroy(); hls=null; }
+
+ video.pause();
+ video.removeAttribute("src");
+ video.load();
+
+ if(video.canPlayType("application/vnd.apple.mpegurl")){
+  video.src = canal.url;
+  video.play().then(()=>status.style.display="none").catch(()=>status.textContent="Pulsa ▶ para reproducir");
+ }else if(window.Hls && Hls.isSupported()){
+  hls = new Hls({enableWorker:true});
+  hls.loadSource(canal.url);
+  hls.attachMedia(video);
+
+  hls.on(Hls.Events.MANIFEST_PARSED,()=>{
+   video.play().then(()=>status.style.display="none").catch(()=>status.textContent="Pulsa ▶ para reproducir");
+  });
+
+  hls.on(Hls.Events.ERROR,(event,data)=>{
+   if(data.fatal) status.textContent="No se pudo reproducir este canal";
+  });
+ }else{
+  status.textContent="Este navegador no soporta HLS";
+ }
+
+ render();
+ marcarActual();
+}
+
+function siguiente(){
+ if(!canales.length) return;
+ reproducir((currentIndex + 1) % canales.length);
+}
+
+function anterior(){
+ if(!canales.length) return;
+ reproducir((currentIndex - 1 + canales.length) % canales.length);
+}
+
+function cargarTextoM3U(text){
+ const lista = parseM3U(text);
+
+ if(!lista.length){
+  alert("No encontré canales válidos en esta lista M3U.");
+  return;
+ }
+
+ canales = lista;
+ currentIndex = -1;
+ search.value = "";
+ render();
+ status.textContent = `${lista.length} canales cargados`;
+ setTimeout(()=>{
+  if(currentIndex < 0) status.style.display="none";
+ },1500);
+}
+
+document.getElementById("fileBtn").onclick=()=>{
+ document.getElementById("fileInput").click();
+};
+
+document.getElementById("fileInput").onchange=async e=>{
+ const file=e.target.files[0];
+ if(!file) return;
+ cargarTextoM3U(await file.text());
+};
+
+document.getElementById("urlBtn").onclick=async()=>{
+ const url=prompt("Pega aquí la URL de tu lista M3U:");
+ if(!url) return;
+
+ status.textContent="Cargando lista M3U...";
+ status.style.display="block";
+
+ try{
+  const response=await fetch(url);
+  if(!response.ok) throw new Error("HTTP "+response.status);
+  cargarTextoM3U(await response.text());
+ }catch(err){
+  status.textContent="";
+  alert("No se pudo cargar la lista.\n\nSi la URL es correcta, probablemente el servidor bloquea CORS.");
+ }
+};
+
+search.addEventListener("input",render);
+
+document.getElementById("prevBtn").onclick=anterior;
+document.getElementById("nextBtn").onclick=siguiente;
+
+document.getElementById("playBtn").onclick=()=>{
+ if(video.paused) video.play().catch(()=>{});
+ else video.pause();
+};
+
+video.addEventListener("play",()=>{
+ document.getElementById("pauseIcon").className="pause";
+ status.style.display="none";
+});
+
+video.addEventListener("pause",()=>{
+ document.getElementById("pauseIcon").className="playTriangle";
+});
+
+document.getElementById("muteBtn").onclick=()=>{
+ video.muted=!video.muted;
+};
+
+document.getElementById("volume").oninput=e=>{
+ video.volume=Number(e.target.value);
+ video.muted=video.volume===0;
+};
+
+document.getElementById("fullscreenBtn").onclick=async()=>{
+ try{
+  if(!document.fullscreenElement) await document.documentElement.requestFullscreen();
+  else await document.exitFullscreen();
+ }catch(e){}
+};
+
+document.getElementById("listBtn").onclick=()=>{
+ app.classList.toggle("listHidden");
+};
+
+/* Teclas de PC: flechas izquierda/derecha cambian canal */
+document.addEventListener("keydown",e=>{
+ if(e.key==="ArrowRight") siguiente();
+ if(e.key==="ArrowLeft") anterior();
+});
+
+render();
+</script>
+</body>
+</html>
